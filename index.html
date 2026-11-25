@@ -1,222 +1,191 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" class="locked">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Haus Zweineun – Design-Ferienhaus in Brodersby an der Schlei</title>
 <meta name="description" content="Das Design-Ferienhaus HAUS ZWEINEUN in Brodersby an der Schlei. Genießen Sie natürliche Stille, das blaue Wasser des Schleifjords und das Grün der Wälder.">
-<meta name="theme-color" content="#FAF8F3">
+<meta name="theme-color" content="#F6F4EF">
+<meta name="robots" content="noindex,nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
 <style>
 /* =========================================================
-   HAUS ZWEINEUN  ·  v4
-   Papierweiß + zwei Farben aus Haus und Landschaft:
-   --reet  Schilf an der Schlei, Teak, Stroh
-   --blau  Schleiblau: Wasser, blaue Stunde, das Gemälde überm Sofa
-   Schrift: Gotham (Fallback Montserrat) in drei Schnitten:
-   Light, Light Italic, Medium.
+   HAUS ZWEINEUN  ·  v7
+   Schwarz, Papierweiß und eine Farbe: Kanugelb, das Gelb
+   der Boote auf der Wiese vor dem Haus.
+   Große Zeilen: --disp (Outfit ExtraLight). Alles Kleine: Gotham
+   (Fallback Montserrat) Light und Medium.
+   Die Variablen heißen aus alten Fassungen noch --blau und
+   --reet: --blau ist die Schriftfarbe, --reet die Sonderfarbe.
    ========================================================= */
 :root{
-  --paper:#FAF8F3;--reet:#DDCDA5;--blau:#1B3350;
-  --soft:rgba(27,51,80,.66);--line:rgba(27,51,80,.18);
+  --paper:#F6F4EF;--blau:#121212;--reet:#E8C547;
+  --line:rgba(18,18,18,.16);
   --font:"Gotham","Gotham SSm","Montserrat",Helvetica,Arial,sans-serif;
-  --m:clamp(20px,5vw,96px);
+  --disp:"Outfit","Gotham","Montserrat",Helvetica,Arial,sans-serif;
+  --m:clamp(20px,4.4vw,84px);
   --g:clamp(14px,1.8vw,32px);
   --u:clamp(34px,4.4vw,84px);
-  --t-h:clamp(25px,3.1vw,50px);
+  --t-d:clamp(34px,5.2vw,88px);
   --t-l:clamp(20px,1.9vw,30px);
   --t-s:clamp(17px,1.45vw,23px);
-  --t-b:clamp(16px,1.16vw,19px);
-  --t-k:clamp(12.5px,.86vw,14px);
+  --t-b:clamp(16px,1.12vw,18px);
+  --t-k:clamp(12px,.82vw,13.5px);
+  --t-h:clamp(25px,3.1vw,50px);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%;background:var(--paper)}
 body{background:var(--paper);color:var(--blau);font:300 var(--t-b)/1.68 var(--font);-webkit-font-smoothing:antialiased;overflow-x:clip}
 img,svg,iframe{display:block;max-width:100%}
-img{height:auto}
+img{height:auto;background:rgba(18,18,18,.06)}
 a{color:inherit}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 :focus-visible{outline:1.5px solid currentColor;outline-offset:4px}
-::selection{background:var(--blau);color:var(--paper)}
-
-/* ---------- Raster und Typo ---------- */
+::selection{background:var(--reet);color:var(--blau)}
 .w{padding-inline:var(--m)}
 .row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--g);padding-inline:var(--m)}
-.sec{padding-block:calc(var(--u)*1.7)}
-.band{background:var(--reet)}
-.deep{background:var(--blau);color:var(--paper)}
-.h{font:300 var(--t-h)/1.18 var(--font);letter-spacing:.09em;text-transform:uppercase}
-.sub{font:italic 300 var(--t-s)/1.4 var(--font);margin-top:.5em}
-.k{font:500 var(--t-k)/1.5 var(--font);letter-spacing:.14em;text-transform:uppercase}
-.head{text-align:center;margin-bottom:calc(var(--u)*1.1)}
-.lnk{display:inline-block;font:500 var(--t-k)/1.5 var(--font);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding-bottom:5px;border-bottom:1px solid currentColor;transition:opacity .25s}
-.lnk:hover{opacity:.6}
-figure{position:relative}
-figure img{width:100%;background:rgba(27,51,80,.06)}
-
-/* sanftes Einblenden. Ohne JavaScript bleibt alles sichtbar. */
-.js [data-r]{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform 1.1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
+.sec{padding-block:calc(var(--u)*1.5)}
+.k{font:500 var(--t-k)/1.5 var(--font);letter-spacing:.16em;text-transform:uppercase}
+.d{font:200 var(--t-d)/1.02 var(--disp);letter-spacing:-.005em}
+.d i{font-style:italic}
+.d b{font-weight:300;text-transform:uppercase;letter-spacing:.02em}
+.h{font:300 var(--t-h)/1.1 var(--disp);text-transform:uppercase;letter-spacing:.03em}
+.sub{font:300 var(--t-l)/1.3 var(--disp);margin-top:.4em}
+.lnk{display:inline-block;font:500 var(--t-k)/1.5 var(--font);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding-bottom:5px;border-bottom:1px solid currentColor;transition:opacity .25s}
+.lnk:hover{opacity:.55}
+.tl{font:300 var(--t-b)/1.5 var(--font);padding-bottom:3px;border-bottom:1px solid currentColor;transition:opacity .25s}
+.tl:hover{opacity:.6}
+.js [data-r]{opacity:0;transform:translateY(22px);transition:opacity 1s ease,transform 1.2s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
 .js [data-r].in{opacity:1;transform:none}
 
 /* ---------- Kopf ---------- */
-.top{position:fixed;inset:0 0 auto;z-index:50;display:flex;justify-content:space-between;align-items:center;
-  padding:calc(env(safe-area-inset-top,0px) + 16px) var(--m) 14px;color:#fff;transition:color .35s,background .35s}
-.top.solid{color:var(--blau);background:rgba(250,248,243,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.top{position:fixed;inset:0 0 auto;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 18px) var(--m) 16px;color:#fff;transition:color .35s,background .35s}
+.top.solid{color:var(--blau);background:rgba(246,244,239,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .top.open{color:var(--blau);background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
-.top .logo{display:block;width:clamp(46px,3.6vw,60px)}
+.top .l{display:flex;gap:clamp(16px,2.2vw,36px)}
+.top .r{justify-self:end;display:flex;align-items:center;gap:clamp(16px,2.2vw,36px)}
+.top a,.top .l button{text-decoration:none;padding-bottom:4px;border-bottom:1px solid transparent;transition:border-color .25s}
+.top .cur{border-color:currentColor}
+.top .logo{display:block;width:clamp(46px,3.6vw,58px);border:0;padding:0}
 .top .logo svg{width:100%;height:auto}
-.top .r{display:flex;align-items:center;gap:clamp(18px,2.2vw,36px)}
-.top .r a{text-decoration:none}
-.burger{position:relative;width:34px;height:26px}
+.burger{display:none;position:relative;width:34px;height:26px}
 .burger i{position:absolute;left:0;right:0;height:1.5px;background:currentColor;transition:transform .4s cubic-bezier(.6,0,.15,1),top .4s}
 .burger i:nth-child(1){top:8px}.burger i:nth-child(2){top:17px}
 .open .burger i:nth-child(1){top:12.5px;transform:rotate(32deg)}
 .open .burger i:nth-child(2){top:12.5px;transform:rotate(-32deg)}
-.menu{position:fixed;inset:0;z-index:45;background:var(--paper);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:clamp(8px,1.6vh,18px);
-  opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s}
+.menu{position:fixed;inset:0;z-index:45;background:var(--paper);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:clamp(4px,1vh,12px);opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s}
 .menu.on{opacity:1;visibility:visible}
-.menu a{font:300 clamp(24px,4.4vh,42px)/1.25 var(--font);letter-spacing:.09em;text-transform:uppercase;text-decoration:none;transition:opacity .25s}
-.menu a:hover{opacity:.55}
-.menu .sm{margin-top:clamp(14px,3vh,34px);font:italic 300 var(--t-s)/1.4 var(--font);letter-spacing:0;text-transform:none}
+.menu a,.menu button{font:200 clamp(30px,5.4vh,52px)/1.15 var(--disp);text-transform:uppercase;letter-spacing:.03em;text-decoration:none;transition:opacity .25s}
+.menu a:hover,.menu button:hover{opacity:.5}
+.menu .sm{margin-top:clamp(14px,3vh,30px);font:300 var(--t-l)/1.3 var(--disp);text-transform:none;letter-spacing:0}
+@media (max-width:900px){.top{grid-template-columns:auto 1fr}.top .l{display:none}.top .logo{grid-column:1}.burger{display:block}}
 
-/* ---------- Bühne: Foto im Originalformat, darüber die 29 ---------- */
-.hero{position:relative;background:var(--blau);overflow:hidden}
-.hero img{width:100%;height:auto}
-.hero::after{content:"";position:absolute;inset:0 0 auto;height:26%;background:linear-gradient(rgba(10,20,34,.38),rgba(10,20,34,0));pointer-events:none}
-.num{position:absolute;z-index:2;fill:none;stroke:#fff;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;overflow:visible;pointer-events:none;will-change:transform}
-.num path,.num circle{vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:0}
-.n2{left:9%;top:13%;width:15.5%}
-.n9{left:25.5%;top:31%;width:15.5%}
-.js .num path,.js .num circle{stroke-dashoffset:1;animation:draw 2.2s cubic-bezier(.6,0,.2,1) .5s forwards}
-.js .n9 path,.js .n9 circle{animation-delay:1s}
-@keyframes draw{to{stroke-dashoffset:0}}
-.cue{position:absolute;z-index:2;right:var(--m);bottom:clamp(18px,3vw,44px);display:flex;flex-direction:column;align-items:flex-end;gap:5px;text-decoration:none;color:#fff;transition:opacity .4s}
-.cue.hide{opacity:0;pointer-events:none}
-.cue .l{display:block;width:34px;height:2px;background:currentColor;transform-origin:left center;animation:cue 2.8s cubic-bezier(.6,0,.15,1) infinite}
-.cue .l:nth-child(2){animation-delay:.18s}.cue .l:nth-child(3){animation-delay:.36s}
-.cue span.k{margin-top:8px}
-@keyframes cue{0%{transform:scaleX(0);opacity:0}35%{transform:scaleX(1);opacity:1}75%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:0}}
+/* ---------- Bühne: Foto, darüber der Name in drei Zeilen ---------- */
+.hero{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden;background:#111;color:#fff}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.38),rgba(0,0,0,.06) 30%,rgba(0,0,0,.08) 60%,rgba(0,0,0,.42))}
+.hero h1{position:absolute;z-index:2;inset:0;font:200 clamp(64px,13.2vw,230px)/.84 var(--disp);text-transform:uppercase;letter-spacing:.01em}
+.hero h1 span{position:absolute;display:block;will-change:transform}
+.hero h1 span:nth-child(1){left:var(--m);top:17%}
+.hero h1 span:nth-child(2){left:44%;top:43%}
+.hero h1 span:nth-child(3){left:20%;top:69%}
+.js .hero h1 span{opacity:0;transform:translateY(.25em);animation:up 1.5s cubic-bezier(.2,.7,.2,1) .35s forwards}
+.js .hero h1 span:nth-child(2){animation-delay:.55s}.js .hero h1 span:nth-child(3){animation-delay:.75s}
+.js.locked .hero h1 span{animation-play-state:paused}
+@keyframes up{to{opacity:1;transform:none}}
+.hero .sub{position:absolute;z-index:2;right:var(--m);bottom:calc(var(--u)*.7);margin:0;text-align:right}
 @media (max-width:720px){
-  .n2{left:8%;top:9%;width:30%}
-  .n9{left:40%;top:20%;width:30%}
+  .hero h1{font-size:25vw}
+  .hero h1 span:nth-child(1){top:14%}.hero h1 span:nth-child(2){left:auto;right:var(--m);top:36%}.hero h1 span:nth-child(3){left:var(--m);top:58%}
+  .hero .sub{left:var(--m);right:var(--m);text-align:left;bottom:28px}
 }
 
-/* ---------- Titelband ---------- */
-.title{text-align:center;padding-block:calc(var(--u)*1.25)}
-.mark{width:clamp(84px,7vw,124px);height:auto;margin:0 auto calc(var(--u)*.45)}
-.mark path{fill:currentColor}
-.js .mark .s{transform-box:fill-box;transform-origin:left center;transform:scaleX(0);transition:transform .7s cubic-bezier(.6,0,.15,1);transition-delay:calc(var(--i)*40ms + 100ms)}
-.js .mark .rf{opacity:0;transition:opacity .9s ease 1.1s}
-.js .in .mark .s{transform:none}
-.js .in .mark .rf{opacity:1}
-
-/* ---------- Einleitung ---------- */
-.intro .lead{grid-column:3/11;text-align:center;font:300 var(--t-l)/1.5 var(--font)}
-.nums{grid-column:2/12;display:grid;grid-template-columns:repeat(4,1fr);gap:var(--g);margin-top:calc(var(--u)*1.2);padding-top:calc(var(--u)*.55);border-top:1px solid var(--line);text-align:center}
-.nums b{display:block;font:300 var(--t-l)/1.2 var(--font);letter-spacing:.05em;text-transform:uppercase}
-.nums span{display:block;margin-top:8px;font:italic 300 var(--t-b)/1.4 var(--font)}
-.pair{align-items:start;margin-top:calc(var(--u)*1.6)}
-.pair .a{grid-column:2/7}
-.pair .b{grid-column:8/12;margin-top:calc(var(--u)*2.2)}
-.intro .more{grid-column:4/10;text-align:center;margin-top:calc(var(--u)*1.5)}
-.big{margin-top:calc(var(--u)*1.6)}
-.big figure{grid-column:1/13}
+/* ---------- Manifest: ein Satz, die Wörter färben sich beim Scrollen ---------- */
+.mani{position:relative;height:230vh}
+.mani .pin{position:sticky;top:0;height:100vh;height:100svh;display:flex;align-items:center;justify-content:center;padding-inline:var(--m)}
+.mani p{position:relative;z-index:2;max-width:11.2em;text-align:center;font:200 clamp(30px,4.5vw,74px)/1.04 var(--disp)}
+.mani p b{font-weight:300;text-transform:uppercase;letter-spacing:.02em}
+.mani p span{opacity:.16;transition:opacity .5s ease}
+.mani p span.on{opacity:1}
+.mani .fl{position:absolute;z-index:1;will-change:transform}
+.mani .fl img{width:100%}
+.mani .f1{left:var(--m);top:34vh;width:15vw}
+.mani .f2{right:var(--m);top:72vh;width:16vw}
+.mani .f3{left:9vw;top:136vh;width:12vw}
+.mani .f4{right:6vw;top:168vh;width:12vw}
 @media (max-width:820px){
-  .intro .lead{grid-column:1/13}.nums{grid-column:1/13;grid-template-columns:1fr 1fr;row-gap:calc(var(--u)*.8)}
-  .pair .a{grid-column:1/10}.pair .b{grid-column:5/13;margin-top:var(--u)}
-  .intro .more{grid-column:1/13;text-align:left}
+  .mani{height:auto}.mani .pin{position:static;height:auto;padding-block:calc(var(--u)*1.6) 0}
+  .mani p{font-size:9vw;max-width:none;text-align:left}
+  .mani .fl{position:static;transform:none!important}
+  .mani .fls{display:grid;grid-template-columns:repeat(12,1fr);column-gap:var(--g);padding:calc(var(--u)*1.2) var(--m) 0;align-items:start}
+  .mani .f1{grid-column:1/7;width:auto}.mani .f2{grid-column:8/13;width:auto;margin-top:calc(var(--u)*1.6)}.mani .f3,.mani .f4{display:none}
 }
 
-/* ---------- Auf einen Blick ---------- */
-.facts dl{grid-column:2/12;display:grid;grid-template-columns:1fr 1fr;column-gap:calc(var(--g)*3)}
-.facts .it{padding:22px 0;border-top:1px solid var(--line)}
-.facts dt{margin-bottom:8px}
-@media (max-width:820px){.facts dl{grid-column:1/13;grid-template-columns:1fr}}
-
-/* ---------- Farbfläche neben Bild ---------- */
-.split{display:grid;grid-template-columns:5fr 7fr;align-items:stretch}
-.split .txt{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:calc(var(--u)*1.3) var(--m)}
-.split .txt p{margin:calc(var(--u)*.5) 0;max-width:27em}
-@media (max-width:820px){.split{grid-template-columns:1fr}}
-
-/* ---------- Innen und Außen ---------- */
-.two{align-items:start}
-.two .c{grid-column:span 6}
-.two .c:nth-of-type(1){padding-right:calc(var(--g)*1.5)}
-.two .c:nth-of-type(2){padding-left:calc(var(--g)*1.5);margin-top:calc(var(--u)*1.8)}
-.two h3{font:300 var(--t-l)/1.2 var(--font);letter-spacing:.09em;text-transform:uppercase;margin:26px 0 4px}
-.two p{margin-top:14px;max-width:30em}
-.tri{align-items:start;margin-top:calc(var(--u)*1.7)}
-.tri figure:nth-child(1){grid-column:1/5;margin-top:calc(var(--u)*1.1)}
-.tri figure:nth-child(2){grid-column:5/9}
-.tri figure:nth-child(3){grid-column:9/13;margin-top:calc(var(--u)*2)}
+/* ---------- Kapitel: Foto über den Bildschirm, das Wort läuft quer durch ---------- */
+.chap{position:relative;height:100vh;height:100svh;min-height:520px;overflow:hidden;color:#fff;background:#111}
+.chap img{position:absolute;left:0;top:-6%;width:100%;height:112%;object-fit:cover;max-width:none;will-change:transform}
+.chap::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.34),rgba(0,0,0,.04) 40%,rgba(0,0,0,.3))}
+.chap h2{position:absolute;z-index:2;left:var(--m);right:var(--m);top:13%;display:flex;justify-content:space-between;font:200 clamp(54px,11.4vw,200px)/.86 var(--disp);text-transform:uppercase}
+.chap .no{position:absolute;z-index:2;left:var(--m);bottom:calc(var(--u)*.7)}
+.block{padding-block:calc(var(--u)*1.5) calc(var(--u)*1.8)}
+.block .tx{grid-column:1/6}
+.block .tx p.t{margin-top:calc(var(--u)*.45);max-width:26em}
+.block .tx .lnk{margin-top:calc(var(--u)*.5)}
+.trio{grid-column:7/13;display:grid;grid-template-columns:repeat(3,1fr);column-gap:var(--g);align-items:start}
+.trio figure:nth-child(2){margin-top:calc(var(--u)*1.3)}
+.trio figure:nth-child(3){margin-top:calc(var(--u)*.5)}
+.trio img{width:100%}
 @media (max-width:820px){
-  .two .c{grid-column:1/13;padding:0!important}.two .c:nth-of-type(2){margin-top:var(--u)}
-  .tri figure:nth-child(1){grid-column:1/8;margin-top:0}.tri figure:nth-child(2){grid-column:6/13;margin-top:var(--g)}.tri figure:nth-child(3){grid-column:2/10;margin-top:var(--g)}
+  .chap h2{font-size:15vw;top:16%}
+  .block .tx{grid-column:1/13}.trio{grid-column:1/13;margin-top:calc(var(--u)*1.1)}
 }
 
-/* ---------- Lage: die Schlei als Karte ---------- */
-.lage .map{grid-column:1/9}
-.lage .map svg{width:100%;height:auto;aspect-ratio:5/4;overflow:hidden}
-.water{fill:var(--blau);stroke:var(--blau);stroke-width:1;vector-effect:non-scaling-stroke;stroke-linejoin:round}
-.fine{fill:none;stroke:var(--blau);stroke-width:1.3;vector-effect:non-scaling-stroke;stroke-linejoin:round}
-.pt{cursor:pointer}
-.pt circle{fill:var(--paper);stroke:var(--blau);stroke-width:1.4;vector-effect:non-scaling-stroke;transition:fill .2s}
-.pt.on circle{fill:var(--blau)}
-.pt text{font-family:var(--font);font-weight:500;fill:var(--blau);opacity:0;transition:opacity .2s;paint-order:stroke;stroke:var(--reet);stroke-linejoin:round}
-.pt.on text{opacity:1}
-.town{font-family:var(--font);font-style:italic;font-weight:300;fill:var(--blau);paint-order:stroke;stroke:var(--reet);stroke-linejoin:round}
-#homec{fill:var(--paper);stroke:var(--blau);stroke-width:1.2;vector-effect:non-scaling-stroke}
-#home{color:var(--blau)}
-.lage .side{grid-column:9/13;align-self:center}
-.tabs{display:flex;gap:26px;margin-bottom:18px}
-.tabs button{font:300 var(--t-l)/1.2 var(--font);letter-spacing:.09em;text-transform:uppercase;opacity:.42;padding-bottom:4px;border-bottom:1px solid transparent;transition:opacity .25s}
-.tabs button[aria-selected="true"]{opacity:1;border-color:currentColor}
-.plist{list-style:none;border-top:1px solid var(--line)}
-.plist li{border-bottom:1px solid var(--line)}
-.plist a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:10px 0;text-decoration:none;transition:padding .25s}
-.plist .o{font:italic 300 var(--t-b)/1.4 var(--font);opacity:.7}
-.plist li.on a{padding-left:10px}
-.addr{margin-top:calc(var(--u)*.6)}
-.addr .lnk{margin-top:14px}
-@media (max-width:820px){.lage .map{grid-column:1/13}.lage .side{grid-column:1/13;margin-top:var(--u)}}
-
-/* ---------- Umgebung: Bildband zum Wischen ---------- */
-.strip{display:flex;gap:var(--g);overflow-x:auto;padding-inline:var(--m);scroll-snap-type:x proximity;scroll-padding-inline:var(--m);scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.strip::-webkit-scrollbar{display:none}
-.strip figure{flex:0 0 auto;height:min(66vh,640px);scroll-snap-align:start}
-.strip figure img{height:100%;width:auto;max-width:none}
-.ctl{display:flex;justify-content:space-between;align-items:center;margin-top:calc(var(--u)*.5)}
-.ctl div{display:flex;gap:10px}
-.ctl button{width:50px;height:50px;border:1px solid var(--blau);border-radius:50%;display:grid;place-items:center;transition:background .25s,color .25s}
-.ctl button:hover{background:var(--blau);color:var(--paper)}
-.ctl svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.4}
-@media (max-width:820px){.strip figure{height:54vh}}
+/* ---------- Eckdaten ---------- */
+.nums{grid-column:1/13;display:grid;grid-template-columns:repeat(4,1fr);gap:var(--g);padding-block:calc(var(--u)*.7);border-block:1px solid var(--blau)}
+.nums b{display:block;font:300 var(--t-h)/1 var(--disp);text-transform:uppercase}
+.nums span{display:block;margin-top:10px}
+.facts .more{grid-column:1/13;margin-top:calc(var(--u)*.6);display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap}
+.press{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px clamp(18px,2.4vw,40px)}
+.press a{font:300 var(--t-l)/1.2 var(--disp);text-transform:uppercase;letter-spacing:.03em;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .25s}
+.press a:hover{border-color:currentColor}
+@media (max-width:820px){.nums{grid-template-columns:1fr 1fr;row-gap:calc(var(--u)*.8)}}
 
 /* ---------- Das ganze Jahr ---------- */
-.yr{align-items:start}
-.yr figure{grid-column:span 3;grid-row:1;align-self:end}
-.yr .sn{grid-column:span 3;grid-row:2;padding-top:22px}
-.yr .p{font:300 var(--t-l)/1.2 var(--font);letter-spacing:.05em;text-transform:uppercase;margin:8px 0 12px}
-.yr .sn p.i{font:italic 300 var(--t-b)/1.5 var(--font)}
-.yr .sn p.t{margin-top:12px}
-.yr .sn .lnk{margin-top:18px}
-@media (max-width:820px){.yr figure,.yr .sn{grid-column:span 6}.yr .sn{margin-bottom:var(--u)}
-  .yr figure:nth-of-type(1),.yr figure:nth-of-type(2){grid-row:1}.yr .sn:nth-of-type(1),.yr .sn:nth-of-type(2){grid-row:2}
-  .yr figure:nth-of-type(3),.yr figure:nth-of-type(4){grid-row:3}.yr .sn:nth-of-type(3),.yr .sn:nth-of-type(4){grid-row:4}}
-@media (max-width:520px){.yr figure,.yr .sn{grid-column:1/13}
-  .yr figure:nth-of-type(1){grid-row:1}.yr .sn:nth-of-type(1){grid-row:2}.yr figure:nth-of-type(2){grid-row:3}.yr .sn:nth-of-type(2){grid-row:4}
-  .yr figure:nth-of-type(3){grid-row:5}.yr .sn:nth-of-type(3){grid-row:6}.yr figure:nth-of-type(4){grid-row:7}.yr .sn:nth-of-type(4){grid-row:8}}
+.yr .hd{grid-column:1/13;display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:calc(var(--u)*.9)}
+.yr .sn{grid-column:span 3}
+.yr .sn:nth-of-type(2){margin-top:calc(var(--u)*1.1)}
+.yr .sn:nth-of-type(3){margin-top:calc(var(--u)*.4)}
+.yr .sn:nth-of-type(4){margin-top:calc(var(--u)*1.6)}
+.yr .sn img{width:100%;margin-bottom:16px}
+.yr .p{font:300 var(--t-h)/1 var(--disp);margin:8px 0 6px}
+.yr .i{font:300 var(--t-s)/1.3 var(--disp)}
+@media (max-width:820px){
+  .row.yr{grid-template-columns:repeat(4,70vw);overflow-x:auto;scroll-snap-type:x proximity;scroll-padding-inline:var(--m);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .row.yr::-webkit-scrollbar{display:none}
+  .yr .hd{grid-column:1/5;position:sticky;left:var(--m);max-width:calc(100vw - var(--m)*2)}
+  .yr .sn:nth-of-type(n){grid-column:auto;grid-row:2;margin-top:0;scroll-snap-align:start}
+}
 
-/* ---------- Abend ---------- */
-.eve{align-items:center}
-.eve .a{grid-column:1/5}
-.eve blockquote{grid-column:5/10;padding-inline:calc(var(--g)*1.2);text-align:center;font:300 var(--t-l)/1.5 var(--font)}
-.eve cite{display:block;margin-top:calc(var(--u)*.5);font:italic 300 var(--t-s)/1.4 var(--font)}
-.eve .b{grid-column:10/13;margin-top:calc(var(--u)*2)}
-@media (max-width:820px){.eve .a{grid-column:1/9}.eve blockquote{grid-column:1/13;padding:0;margin-block:var(--u)}.eve .b{grid-column:5/13;margin-top:0}}
+/* ---------- Gastgeber ---------- */
+.host{text-align:center;padding-block:calc(var(--u)*2)}
+.host blockquote{max-width:20em;margin:0 auto;font:200 clamp(26px,3.3vw,54px)/1.12 var(--disp)}
+.host cite{display:block;margin-top:calc(var(--u)*.6);font:300 var(--t-l)/1.3 var(--disp)}
+/* ---------- Gästestimmen: zwei Sätze, leise, direkt vor der Buchung ---------- */
+.voices{padding-block:calc(var(--u)*1.5) 0}
+.voices .lab{grid-column:1/13;text-align:center;margin-bottom:calc(var(--u)*.7)}
+.voices figure{grid-column:span 5;margin:0}
+.voices figure:nth-of-type(1){grid-column:2/7}
+.voices figure:nth-of-type(2){grid-column:7/12;padding-left:calc(var(--g)*1.5);border-left:1px solid var(--line)}
+.voices figure:only-of-type{grid-column:3/11;text-align:center}
+.voices blockquote{font:italic 300 var(--t-s)/1.5 var(--font)}
+.voices figcaption{margin-top:16px}
+@media (max-width:820px){.voices figure:nth-of-type(n){grid-column:1/13;padding-left:0;border-left:0}.voices figure:nth-of-type(2){margin-top:calc(var(--u)*.8);padding-top:calc(var(--u)*.8);border-top:1px solid var(--line)}}
+
+
+.voices blockquote{font:300 var(--t-l)/1.3 var(--disp)}
+.voices{padding-block:0 calc(var(--u)*.6)}
 
 /* ---------- Buchung ---------- */
 .book{align-items:start}
@@ -236,179 +205,362 @@ figure img{width:100%;background:rgba(27,51,80,.06)}
 .cta[aria-disabled="true"]{opacity:.3;pointer-events:none}
 .cal .fr{background:#fff;border:1px solid var(--line)}
 .cal iframe{width:100%;height:620px;border:0}
-.info{grid-column:1/13;margin-top:calc(var(--u)*1.3);border-bottom:1px solid var(--line)}
-.info details{border-top:1px solid var(--line)}
-.info summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;cursor:pointer}
-.info summary::-webkit-details-marker{display:none}
-.info summary::after{content:"";flex:0 0 13px;height:13px;background:linear-gradient(currentColor,currentColor) center/100% 1.4px no-repeat,linear-gradient(currentColor,currentColor) center/1.4px 100% no-repeat;transition:transform .35s}
-.info details[open] summary::after{transform:rotate(45deg)}
-.info .in{padding:0 0 28px;max-width:54em}
-.info .in p+p{margin-top:.9em}
+.book .also{grid-column:1/13;margin-top:calc(var(--u)*1);text-align:center}
+.tl{font:300 var(--t-b)/1.5 var(--font);padding-bottom:3px;border-bottom:1px solid currentColor;transition:opacity .25s}
+.tl:hover{opacity:.6}
 @media (max-width:820px){.book .calc,.book .cal{grid-column:1/13}.book .cal{margin-top:calc(var(--u)*1.2)}}
 
-/* ---------- Schluss ---------- */
-.bye{text-align:center;padding-block:calc(var(--u)*1.15)}
-.bye a{text-decoration:none}
-.bye .h{font-size:clamp(17px,4.3vw,50px);letter-spacing:.07em;overflow-wrap:anywhere}
-.bye .h a{border-bottom:1px solid transparent;transition:border-color .25s}
-.bye .h a:hover{border-color:currentColor}
-.end{padding-block:calc(var(--u)*1.3) calc(var(--u)*.9)}
-.end .logo{grid-column:1/4;width:clamp(84px,7vw,120px)}
-.end .c{grid-column:span 3}
-.end .c:nth-of-type(1){grid-column:4/7}.end .c:nth-of-type(2){grid-column:7/10}.end .c:nth-of-type(3){grid-column:10/12}
-.end .c p+p{margin-top:.9em}
-.end a{text-underline-offset:4px}
-.end .n{grid-column:12/13;grid-row:1;display:flex;justify-content:flex-end;align-items:flex-start;gap:6%}
-.end .n svg{position:static;width:46%;stroke:var(--paper);fill:none;stroke-width:1.5;overflow:visible}
-.end .n svg path,.end .n svg circle{vector-effect:non-scaling-stroke}
-@media (max-width:820px){.end .logo{grid-column:1/8;margin-bottom:var(--u)}.end .c:nth-of-type(n){grid-column:1/13;margin-bottom:var(--g)}.end .n{grid-column:9/13}}
 
-/* ---------- Buchen, immer erreichbar ---------- */
-.fab{position:fixed;z-index:40;right:var(--m);bottom:calc(18px + env(safe-area-inset-bottom,0px));min-height:48px;padding:0 24px;display:flex;align-items:center;gap:14px;
-  background:var(--blau);color:var(--paper);text-decoration:none;font:500 var(--t-k)/1.2 var(--font);letter-spacing:.14em;text-transform:uppercase;transform:translateY(180%);transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.book h3{font:300 var(--t-h)/1.1 var(--disp);letter-spacing:.03em}
+.head{margin-bottom:calc(var(--u)*1)}
+
+/* ---------- Schluss: die Sonderfarbe ---------- */
+.end{position:relative;background:var(--reet);color:var(--blau);overflow:hidden;padding-top:calc(var(--u)*1.3)}
+.end .c{grid-column:span 3}
+.end .c:first-child{grid-column:1/6}
+.end .c p+p{margin-top:.9em}
+.end .mail{font:300 var(--t-h)/1.1 var(--disp);text-decoration:none;overflow-wrap:anywhere}
+.end a{text-underline-offset:4px}
+.end .name{margin:calc(var(--u)*1.2) 0 -.17em calc(var(--m) - .03em);font:200 18.5vw/.8 var(--disp);text-transform:uppercase;white-space:nowrap;letter-spacing:-.01em}
+@media (max-width:820px){.end .c:nth-child(n){grid-column:1/13;margin-bottom:var(--g)}}
+
+/* ---------- Leisten ---------- */
+.fab{position:fixed;z-index:40;right:var(--m);bottom:calc(18px + env(safe-area-inset-bottom,0px));min-height:48px;padding:0 24px;display:flex;align-items:center;gap:14px;background:var(--reet);color:var(--blau);text-decoration:none;font:500 var(--t-k)/1.2 var(--font);letter-spacing:.16em;text-transform:uppercase;transform:translateY(180%);transition:transform .55s cubic-bezier(.2,.7,.2,1)}
 .fab.on{transform:none}
-.fab i{font:italic 300 var(--t-b)/1 var(--font);letter-spacing:0;text-transform:none}
-@media (max-width:520px){.fab{left:var(--m);right:var(--m);justify-content:center}}
+.fab i{font:300 var(--t-s)/1 var(--disp);letter-spacing:0;text-transform:none}
+.dock{display:none}
+@media (max-width:900px){
+  .fab{display:none!important}
+  .dock{position:fixed;z-index:40;left:var(--m);right:var(--m);bottom:calc(14px + env(safe-area-inset-bottom,0px));display:flex;gap:8px;transform:translateY(220%);transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+  .dock.on{transform:none}
+  .dock a,.dock button{flex:1;min-height:48px;display:flex;align-items:center;justify-content:center;text-decoration:none;font:500 var(--t-k)/1.2 var(--font);letter-spacing:.1em;text-transform:uppercase;background:var(--paper);color:var(--blau);box-shadow:0 0 0 1px var(--blau) inset}
+  .dock a:last-child{background:var(--reet);box-shadow:none}
+}
+html.locked .dock,html.locked .fab{display:none}
+
+/* ---------- Schublade "Alles Wichtige" ---------- */
+.shade{position:fixed;inset:0;z-index:60;background:rgba(18,18,18,.5);opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s}
+.shade.on{opacity:1;visibility:visible}
+.drawer{position:fixed;z-index:61;top:0;right:0;bottom:0;width:min(640px,100%);background:var(--paper);color:var(--blau);transform:translateX(102%);visibility:hidden;transition:transform .6s cubic-bezier(.2,.7,.2,1),visibility .6s;display:flex;flex-direction:column}
+.drawer.on{transform:none;visibility:visible}
+.drawer .dh{flex:0 0 auto;display:flex;justify-content:space-between;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 18px) clamp(20px,4vw,40px) 14px;border-bottom:1px solid var(--line)}
+.drawer .dh button{width:44px;height:44px;margin-right:-10px;position:relative}
+.drawer .dh button::before,.drawer .dh button::after{content:"";position:absolute;left:8px;right:8px;top:21px;height:1.5px;background:currentColor;transform:rotate(32deg)}
+.drawer .dh button::after{transform:rotate(-32deg)}
+.drawer .tabs{flex:0 0 auto;display:flex;gap:clamp(14px,3vw,28px);padding:14px clamp(20px,4vw,40px) 0;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.drawer .tabs::-webkit-scrollbar{display:none}
+.drawer .tabs button{flex:0 0 auto;padding:6px 0 12px;opacity:.5;border-bottom:1.5px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.drawer .tabs button[aria-selected="true"]{opacity:1;border-color:currentColor}
+.drawer .db{flex:1 1 auto;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:8px clamp(20px,4vw,40px) calc(env(safe-area-inset-bottom,0px) + 40px)}
+.pane{display:none}
+.pane.on{display:block}
+.pane{font-size:15.5px;line-height:1.62}
+.pane .hd,.pane dt,.pane summary{font:300 21px/1.25 var(--font);letter-spacing:.07em;text-transform:uppercase}
+.pane dd,.pane .in,.pane .season i,.post p{color:rgba(18,18,18,.74)}
+.pane .it{display:grid;grid-template-columns:150px minmax(0,1fr);column-gap:24px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line)}
+@media (max-width:560px){.pane .it{grid-template-columns:1fr;row-gap:6px}}
+.pane h4{font:300 var(--t-l)/1.2 var(--font);letter-spacing:.09em;text-transform:uppercase;margin:26px 0 6px}
+.plist{list-style:none}
+.plist li{border-bottom:1px solid var(--line)}
+.plist a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:11px 0;text-decoration:none}
+.plist .o{font:italic 300 var(--t-b)/1.4 var(--font);opacity:.7}
+.season{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.season b{font:300 21px/1.25 var(--font);letter-spacing:.04em;white-space:nowrap}
+.season i{display:block;margin-top:4px;font:italic 300 15.5px/1.45 var(--font)}
+.pane details{border-bottom:1px solid var(--line)}
+.pane summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;cursor:pointer}
+.pane summary::-webkit-details-marker{display:none}
+.pane summary::after{content:"";flex:0 0 13px;height:13px;background:linear-gradient(currentColor,currentColor) center/100% 1.4px no-repeat,linear-gradient(currentColor,currentColor) center/1.4px 100% no-repeat;transition:transform .35s}
+.pane details[open] summary::after{transform:rotate(45deg)}
+.pane .in{padding:0 0 22px}
+.pane .in p+p{margin-top:.9em}
+.post{display:block;padding:20px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.post .hd{display:block}
+.post p{margin-top:6px}
+.pane .more{margin-top:22px}
+
+
+.pane .hd,.pane dt,.pane summary{font:300 24px/1.15 var(--disp);letter-spacing:.03em}
+.season b{font:300 24px/1.15 var(--disp)}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .js [data-r]{opacity:1;transform:none;transition:none}
-  .js .num path,.js .num circle{animation:none;stroke-dashoffset:0}
-  .js .mark .s{transform:none;transition:none}.js .mark .rf{opacity:1;transition:none}
-  .cue .l{animation:none}
+  .js .hero h1 span{animation:none;opacity:1;transform:none}
+  .mani p span{opacity:1;transition:none}
+  .drawer,.shade{transition:none}
 }
+/* ---------- Vorschaltseite mit Passwort ---------- */
+html.locked,html.locked body{overflow:hidden;height:100%}
+html.locked .top,html.locked .menu,html.locked main,html.locked .bye,html.locked .end,html.locked .fab{pointer-events:none;-webkit-user-select:none;user-select:none}
+html.locked .fab{display:none}
+.js.locked .num path,.js.locked .num circle{animation:none}
+.gate{position:fixed;left:0;top:0;right:0;bottom:0;width:100%;height:100%;z-index:1000;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;background:#0b0b0b;color:#fff;transition:opacity .7s ease,visibility .7s}
+.gate.off{opacity:0;visibility:hidden;pointer-events:none}
+.gate ::selection{background:#fff;color:#0b0b0b}
+.gate .gw{min-height:100%;display:table;width:100%}
+.gate .gc{display:table-cell;vertical-align:middle;padding:calc(env(safe-area-inset-top,0px) + 44px) 26px calc(env(safe-area-inset-bottom,0px) + 44px)}
+.gate .card{max-width:500px;margin:0 auto;-webkit-animation:gin 1s ease both;animation:gin 1s ease both}
+@-webkit-keyframes gin{from{opacity:0}to{opacity:1}}
+@keyframes gin{from{opacity:0}to{opacity:1}}
+.gate .zl{display:block;width:78px;height:auto;margin:0 0 clamp(44px,9vh,92px);-webkit-filter:brightness(0) invert(1);filter:brightness(0) invert(1)}
+.gate h2{font:200 clamp(30px,6.6vw,42px)/1.14 "Outfit","Gotham","Montserrat",Helvetica,Arial,sans-serif;letter-spacing:-.01em;text-transform:none;color:#fff;margin:0 0 28px}
+.gate p{font:300 16px/1.72 var(--font);letter-spacing:0;text-transform:none;color:rgba(255,255,255,.76);margin:14px 0 0}
+.gate .sig{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;margin-top:30px}
+.gate .who{display:block;font-size:0;white-space:nowrap;margin-right:16px}
+.gate .who img{display:inline-block;width:46px;height:46px;border-radius:50%;border:2px solid #0b0b0b;-webkit-filter:grayscale(1);filter:grayscale(1);vertical-align:top}
+.gate .who img+img{margin-left:-12px}
+.gate .sig p{margin:0;color:#fff;line-height:1.45}
+.gate form{margin-top:44px;padding-top:30px;border-top:1px solid rgba(255,255,255,.2)}
+.gate label{display:block;font:300 14px/1.5 var(--font);letter-spacing:0;text-transform:none;color:rgba(255,255,255,.6);margin:0}
+.gate .fld{position:relative}
+.gate input{display:block;width:100%;height:54px;padding:0 96px 0 0;border:0;border-bottom:1px solid rgba(255,255,255,.45);border-radius:0;background:transparent;color:#fff;caret-color:#fff;font:300 18px/1.2 var(--font);letter-spacing:.04em;-webkit-appearance:none;appearance:none;outline:none;box-shadow:none}
+.gate input:focus{border-bottom-color:#fff;box-shadow:0 1px 0 0 #fff}
+.gate input:-webkit-autofill{-webkit-text-fill-color:#fff;-webkit-box-shadow:0 0 0 100px #0b0b0b inset;caret-color:#fff}
+.gate .eye{position:absolute;right:0;top:0;height:54px;padding:0 0 0 14px;background:none;border:0;font:300 14px/1 var(--font);letter-spacing:0;text-transform:none;color:rgba(255,255,255,.6);cursor:pointer}
+.gate .eye:hover,.gate .eye:focus{color:#fff}
+.gate .go{position:relative;display:block;width:100%;min-height:58px;margin-top:24px;padding:0 56px 0 22px;border:1px solid #fff;border-radius:0;background:#fff;color:#0b0b0b;font:500 15px/1.2 var(--font);letter-spacing:0;text-transform:none;text-align:left;cursor:pointer;-webkit-appearance:none;appearance:none;transition:background .3s ease,color .3s ease}
+.gate .go::after{content:"";position:absolute;right:22px;top:50%;width:22px;height:1px;background:currentColor}
+.gate .go::before{content:"";position:absolute;right:22px;top:50%;width:8px;height:8px;margin-top:-4px;border-top:1px solid currentColor;border-right:1px solid currentColor;-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+.gate .go:hover,.gate .go:focus{background:transparent;color:#fff}
+.gate .err{min-height:1.6em;margin-top:14px;font:300 14px/1.5 var(--font);color:#fff}
+.gate .bad input{border-bottom-color:#fff;box-shadow:0 1px 0 0 #fff}
+.gate noscript p{color:#fff}
+@media (prefers-reduced-motion:reduce){.gate .card{-webkit-animation:none;animation:none}.gate{transition:none}}
+
+
+/* Outfit: etwas kleinere Grade und mehr Zeilenabstand als bei der Antiqua */
+:root{--t-d:clamp(30px,4.4vw,74px);--t-h:clamp(22px,2.55vw,42px);--t-l:clamp(18px,1.55vw,25px);--t-s:clamp(16px,1.25vw,20px)}
+.d{line-height:1.1;letter-spacing:-.01em}
+.d i{font-style:normal}
+.hero h1{font-size:clamp(60px,12.6vw,220px);letter-spacing:0}
+.mani p{font-size:clamp(26px,3.9vw,64px);line-height:1.12;max-width:13em}
+.chap h2{font-size:clamp(46px,10vw,176px)}
+.host blockquote{font-size:clamp(23px,2.8vw,46px);line-height:1.2}
+.menu a,.menu button{font-size:clamp(26px,4.6vh,44px)}
+.end .name{font-size:18vw;letter-spacing:0;margin-bottom:-.13em}
+.pane .hd,.pane dt,.pane summary,.season b{font-size:21px}
+.sub,.host cite,.yr .i,.voices blockquote{line-height:1.4}
+@media (max-width:720px){.hero h1{font-size:24vw}.mani p{font-size:8vw;max-width:none}}
+/* ---------- Intro: das Logo baut sich Balken für Balken auf, dann öffnet sich der gelbe Rahmen ---------- */
+.intro{display:none}
+.js .intro{display:block;position:fixed;left:0;top:0;right:0;bottom:0;z-index:900;overflow:hidden}
+.intro i{position:absolute;background:#E8C547;will-change:transform}
+.intro .t{left:0;right:0;top:0;height:50.5%;-webkit-transform-origin:50% 0;transform-origin:50% 0}
+.intro .b{left:0;right:0;bottom:0;height:50.5%;-webkit-transform-origin:50% 100%;transform-origin:50% 100%}
+.intro .l{left:0;top:0;bottom:0;width:50.5%;-webkit-transform-origin:0 50%;transform-origin:0 50%}
+.intro .r{right:0;top:0;bottom:0;width:50.5%;-webkit-transform-origin:100% 50%;transform-origin:100% 50%}
+.intro svg{position:absolute;left:50%;top:50%;width:clamp(104px,10vw,150px);height:auto;fill:#121212;overflow:visible;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
+.intro svg g{opacity:0}
+.intro svg g.a{-webkit-transform:translateX(-260px);transform:translateX(-260px)}
+.intro svg g.b{-webkit-transform:translateX(260px);transform:translateX(260px)}
+.intro svg g.r{-webkit-transform:translateY(-90px);transform:translateY(-90px)}
+.intro.go svg g{-webkit-animation:lg .6s cubic-bezier(.2,.7,.2,1) forwards;animation:lg .6s cubic-bezier(.2,.7,.2,1) forwards;-webkit-animation-delay:calc(.2s + var(--k) * 52ms);animation-delay:calc(.2s + var(--k) * 52ms)}
+.intro.go svg{-webkit-animation:iout .4s ease 2.35s forwards;animation:iout .4s ease 2.35s forwards}
+.intro.go .t,.intro.go .b{-webkit-animation:iy 1.3s cubic-bezier(.76,0,.24,1) 2.5s forwards;animation:iy 1.3s cubic-bezier(.76,0,.24,1) 2.5s forwards}
+.intro.go .l,.intro.go .r{-webkit-animation:ix 1.3s cubic-bezier(.76,0,.24,1) 2.5s forwards;animation:ix 1.3s cubic-bezier(.76,0,.24,1) 2.5s forwards}
+@-webkit-keyframes lg{to{opacity:1;-webkit-transform:none}}
+@keyframes lg{to{opacity:1;transform:none}}
+@-webkit-keyframes iout{to{opacity:0}}
+@keyframes iout{to{opacity:0}}
+@-webkit-keyframes iy{to{-webkit-transform:scaleY(0)}}
+@keyframes iy{to{transform:scaleY(0)}}
+@-webkit-keyframes ix{to{-webkit-transform:scaleX(0)}}
+@keyframes ix{to{transform:scaleX(0)}}
+html.intro-on,html.intro-on body{overflow:hidden}
+.js.intro-on .hero h1 span{animation-play-state:paused}
+.hero img{transition:transform 2.4s cubic-bezier(.2,.7,.2,1)}
+.intro-on .hero img{transform:scale(1.07)}
+
+/* ---------- Runde 25.11. ---------- */
+/* Vorgestellt in: Logos statt Zahlenleiste */
+.feat{padding-block:calc(var(--u)*1.2) calc(var(--u)*.4)}
+.feat .fr{grid-column:1/13;display:grid;grid-template-columns:minmax(120px,1fr) 1fr 1fr 1fr;align-items:center;gap:var(--g);padding-block:calc(var(--u)*.75);border-block:1px solid var(--blau)}
+.feat .lg{justify-self:center;display:block;color:var(--blau);text-decoration:none;border:0;transition:opacity .25s}
+.feat a.lg:hover{opacity:.55}
+.feat .lg svg{display:block;height:100%;width:auto}
+.feat .mv{height:clamp(50px,4.8vw,72px)}
+.feat .fw{height:clamp(15px,1.4vw,21px)}
+.feat .sp{height:clamp(36px,3.4vw,50px)}
+@media (max-width:720px){
+  .feat .fr{grid-template-columns:repeat(3,1fr);row-gap:22px}
+  .feat .fr .k{grid-column:1/-1}
+  .feat .mv{height:44px}.feat .fw{height:12px}.feat .sp{height:30px}
+}
+/* Headlines: ein Schnitt, eine Größe */
+.d b,.mani p b{font-weight:inherit}
+.h{font:200 var(--t-d)/1.1 var(--disp);text-transform:none;letter-spacing:-.01em}
+.book h3{font:500 var(--t-k)/1.5 var(--font);letter-spacing:.16em;text-transform:uppercase}
+/* Kapitelwörter: Buchstaben steigen nacheinander aus einer Maske */
+.chap h2 span{overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.chap h2 i{display:block;font-style:normal}
+.js .chap h2 i{transform:translate3d(0,108%,0);transition:transform 1.15s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--k)*80ms)}
+.js .chap h2.in i{transform:none}
+/* Das ganze Jahr: Bildunterkanten und Texte auf einer Linie, Bilder im Originalformat */
+.yr .sn:nth-of-type(n){margin-top:0}
+@supports (grid-template-rows:subgrid){
+  .yr .sn{grid-row:2/span 4;display:grid;grid-template-rows:subgrid;row-gap:0}
+  .yr .sn figure{align-self:end}
+  @media (max-width:820px){.yr .sn:nth-of-type(n){grid-row:2/span 4}}
+}
+@media (prefers-reduced-motion:reduce){.js .chap h2 i{transform:none;transition:none}}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+<!-- VORSCHALTSEITE: persönliche Nachricht + Passwort. Zum Entfernen diesen Block, das Script darunter und class="locked" am <html> löschen. -->
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gh">
+  <div class="gw"><div class="gc">
+    <div class="card">
+      <img class="zl" src="img/zoleo_logo.png" width="640" height="300" alt="ZOLEO">
+      <h2 id="gh">Liebe Inken, lieber Thomas</h2>
+      <p>wir haben lange nichts voneinander gehört und hoffen, es geht euch gut. Wie läuft der Umzug von notholt? Und wie geht es dem Haus Zweineun? Jetzt, wo es kalt wird, haben wir ein bisschen Fernweh nach der Schlei bekommen.</p>
+      <p>Bei ZOLEO kümmern wir uns inzwischen auch um Webauftritte. Deshalb haben wir uns ganz ungezwungen überlegt, wie eine neue Seite für das Haus Zweineun aussehen könnte: frisch, am Handy genauso gut wie am Desktop. Später wäre so etwas vielleicht auch für notholt denkbar.</p>
+      <p>Seht es als Gesprächsgrundlage. Wenn es euch gefällt, meldet euch gern, dann arbeiten wir mit euch daran weiter.</p>
+      <div class="sig"><span class="who"><img src="img/zoleo_zoa.jpg" width="92" height="92" alt="Zoa"><img src="img/zoleo_leo.jpg" width="92" height="92" alt="Leo"></span><p>Liebe Grüße<br>Zoa &amp; Leo</p></div>
+      <form id="gf" action="#" method="get" autocomplete="off" novalidate>
+        <label for="gp">Passwort</label>
+        <div class="fld"><input id="gp" name="p" type="password" inputmode="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="go" aria-describedby="ge"><button type="button" class="eye" id="gs" aria-pressed="false">Zeigen</button></div>
+        <button type="submit" class="go">Seite ansehen</button>
+        <p class="err" id="ge" role="alert" aria-live="assertive"></p>
+        <noscript><p>Bitte JavaScript im Browser aktivieren, um die Seite zu öffnen.</p></noscript>
+      </form>
+    </div>
+  </div></div>
+</div>
+<script>
+/* Eigenständig und bewusst in altem JavaScript geschrieben, damit es in jedem Browser läuft. */
+(function(){
+  var KEY='hz29_ok',SUM='vowx0b.1nxisk6';
+  var root=document.documentElement,gate=document.getElementById('gate'),form=document.getElementById('gf'),inp=document.getElementById('gp'),err=document.getElementById('ge'),eye=document.getElementById('gs');
+  function sum(s){var a=0x811c9dc5,b=0x1b873593,i,c;for(i=0;i<s.length;i++){c=s.charCodeAt(i);a^=c;a=(a+((a<<1)+(a<<4)+(a<<7)+(a<<8)+(a<<24)))>>>0;b=((b^c)*31+(b>>>3))>>>0}return a.toString(36)+'.'+b.toString(36)}
+  /* Gemerkt wird nur für das offene Browserfenster. Beim nächsten Öffnen erscheint die Nachricht wieder. */
+  try{window.localStorage.removeItem(KEY)}catch(e){}
+  function get(){var v=null;try{v=window.sessionStorage.getItem(KEY)}catch(e){}if(!v){try{if(window.name===KEY+':'+SUM)v=SUM}catch(e){}}return v}
+  function put(){try{window.sessionStorage.setItem(KEY,SUM)}catch(e){}try{window.name=KEY+':'+SUM}catch(e){}}
+  function open(fast){
+    root.className=root.className.replace(/(^|\s)locked(?=\s|$)/g,'');
+    if(fast){gate.style.display='none'}else{gate.className+=' off';setTimeout(function(){gate.style.display='none'},800)}
+    try{window.scrollTo(0,0)}catch(e){}
+  }
+  if(get()===SUM){open(true);return}
+  form.onsubmit=function(e){
+    if(e&&e.preventDefault)e.preventDefault();
+    var v=(inp.value||'').replace(/^\s+|\s+$/g,'').toLowerCase();
+    if(sum(v)===SUM){put();try{inp.blur()}catch(x){}open(false);try{if(window.hzIntro)window.hzIntro()}catch(x){}}
+    else{err.innerHTML=v?'Das Passwort stimmt leider nicht.':'Bitte das Passwort eingeben.';form.className='bad';try{inp.focus();inp.select()}catch(x){}}
+    return false;
+  };
+  inp.oninput=function(){form.className='';err.innerHTML=''};
+  eye.onclick=function(){var show=inp.type==='password';try{inp.type=show?'text':'password'}catch(x){}eye.innerHTML=show?'Verbergen':'Zeigen';eye.setAttribute('aria-pressed',show?'true':'false')};
+  /* Tastatur bleibt im Fenster, solange gesperrt ist */
+  document.addEventListener('focusin',function(e){if(/(^|\s)locked(\s|$)/.test(root.className)&&!gate.contains(e.target)){try{inp.focus()}catch(x){}}});
+})();
+</script>
+<!-- INTRO: Logo, dann öffnet sich der Rahmen. Läuft einmal pro Browserfenster. -->
+<div class="intro" id="intro" aria-hidden="true"><i class="t"></i><i class="b"></i><i class="l"></i><i class="r"></i><svg viewBox="0 0 1296 769"><g class="a" style="--k:0"><path d="M86,742 L86,762 L1202,762 L1202,742Z"/></g><g class="b" style="--k:1"><path d="M86,712 L86,732 L1202,732 L1202,712Z"/></g><g class="a" style="--k:2"><path d="M86,682 L86,702 L692,702 L692,682Z"/><path d="M826,682 L826,702 L1202,702 L1202,682Z"/></g><g class="b" style="--k:3"><path d="M86,652 L86,672 L692,672 L692,652Z"/><path d="M826,652 L826,672 L1202,672 L1202,652Z"/></g><g class="a" style="--k:4"><path d="M86,622 L86,642 L692,642 L692,622Z"/><path d="M826,622 L826,642 L1202,642 L1202,622Z"/></g><g class="b" style="--k:5"><path d="M86,592 L87,613 L692,613 L692,592Z"/><path d="M826,592 L827,613 L1202,613 L1202,592Z"/></g><g class="a" style="--k:6"><path d="M86,562 L86,583 L692,583 L692,562Z"/><path d="M826,562 L826,583 L1202,583 L1202,562Z"/></g><g class="b" style="--k:7"><path d="M86,532 L87,553 L286,552 L285,532Z"/><path d="M522,533 L523,553 L692,553 L692,532Z"/><path d="M826,532 L826,553 L916,553 L916,532Z"/><path d="M997,532 L997,553 L1202,553 L1202,532Z"/></g><g class="a" style="--k:8"><path d="M86,503 L86,523 L286,522 L285,502Z"/><path d="M522,503 L523,523 L692,523 L692,502Z"/><path d="M826,502 L826,523 L916,523 L916,502Z"/><path d="M997,502 L997,523 L1202,523 L1202,502Z"/></g><g class="b" style="--k:9"><path d="M87,472 L87,493 L285,493 L285,472Z"/><path d="M522,473 L523,493 L692,493 L692,472Z"/><path d="M826,473 L826,493 L916,493 L916,472Z"/><path d="M997,472 L997,493 L1202,493 L1202,472Z"/></g><g class="a" style="--k:10"><path d="M87,443 L87,463 L286,463 L286,443Z"/><path d="M522,443 L522,463 L692,463 L692,443Z"/><path d="M826,443 L826,463 L916,463 L916,443Z"/><path d="M997,443 L997,463 L1202,463 L1202,443Z"/></g><g class="b" style="--k:11"><path d="M93,433 L286,433 L286,413 L122,413Z"/><path d="M522,413 L522,433 L692,433 L692,413Z"/><path d="M825,413 L825,433 L918,433 L918,413Z"/><path d="M997,413 L997,433 L1190,433 L1160,413Z"/></g><g class="a" style="--k:12"><path d="M137,403 L1145,403 L1116,383 L167,383Z"/></g><g class="b" style="--k:13"><path d="M182,373 L1101,373 L1071,353 L211,353Z"/></g><g class="a" style="--k:14"><path d="M226,343 L1056,343 L1027,323 L256,323Z"/></g><g class="b" style="--k:15"><path d="M271,313 L1012,313 L982,293 L300,293Z"/></g><g class="a" style="--k:16"><path d="M318,281 L964,281 L935,261 L348,261Z"/></g><g class="b" style="--k:17"><path d="M364,250 L526,250 L526,230 L394,230Z"/><path d="M771,231 L772,250 L918,250 L889,230Z"/></g><g class="a" style="--k:18"><path d="M410,219 L526,219 L526,199 L440,199Z"/><path d="M771,199 L772,218 L871,218 L839,197 L772,197Z"/></g><g class="b" style="--k:19"><path d="M455,189 L526,189 L526,169 L484,169Z"/><path d="M771,169 L771,189 L828,189 L798,169Z"/></g><g class="a" style="--k:20"><path d="M499,159 L783,159 L754,139 L529,139Z"/></g><g class="b" style="--k:21"><path d="M544,129 L739,129 L709,109 L573,109Z"/></g><g class="a" style="--k:22"><path d="M590,98 L693,98 L663,78 L619,78Z"/></g><g class="r" style="--k:24"><path d="M1281,445 L946,219 L946,81 L886,81 L885,178 L669,33 L645,15 L5,447 L22,471 L641,54 L676,76 L1263,472Z"/></g></svg></div>
+<script>
+(function(){
+  var root=document.documentElement,el=document.getElementById('intro');if(!el)return;
+  var still=false,back=false,started=false;
+  try{still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches}catch(e){}
+  /* Kein Intro, wenn man vom Gäste Kompass zurückkommt. Beim Neuladen läuft es immer. */
+  try{back=window.sessionStorage.getItem('hz29_back')==='1';window.sessionStorage.removeItem('hz29_back')}catch(e){}
+  try{var nv=performance.getEntriesByType&&performance.getEntriesByType('navigation')[0];if(nv&&nv.type==='back_forward')back=true}catch(e){}
+  function free(){root.className=root.className.replace(/(^|\s)intro-on(?=\s|$)/g,'')}
+  function kill(){free();el.style.display='none'}
+  function play(){
+    if(started)return;started=true;
+    if(back||still){kill();return}
+    el.className+=' go';
+    setTimeout(free,2700);setTimeout(kill,4000);
+  }
+  window.hzIntro=play;
+  if(back||still){kill();return}
+  root.className+=' intro-on';
+  if(!/(^|\s)locked(\s|$)/.test(root.className))play();
+})();
+</script>
+
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="logo" viewBox="0 0 1296 769"><path fill="currentColor" d="M1281,445 L946,219 L946,81 L886,81 L885,178 L669,33 L645,15 L5,447 L22,471 L641,54 L676,76 L1263,472Z"/><path fill="currentColor" d="M86,742 L86,762 L1202,762 L1202,742Z"/><path fill="currentColor" d="M86,712 L86,732 L1202,732 L1202,712Z"/><path fill="currentColor" d="M86,682 L86,702 L692,702 L692,682Z"/><path fill="currentColor" d="M826,682 L826,702 L1202,702 L1202,682Z"/><path fill="currentColor" d="M86,652 L86,672 L692,672 L692,652Z"/><path fill="currentColor" d="M826,652 L826,672 L1202,672 L1202,652Z"/><path fill="currentColor" d="M86,622 L86,642 L692,642 L692,622Z"/><path fill="currentColor" d="M826,622 L826,642 L1202,642 L1202,622Z"/><path fill="currentColor" d="M86,592 L87,613 L692,613 L692,592Z"/><path fill="currentColor" d="M826,592 L827,613 L1202,613 L1202,592Z"/><path fill="currentColor" d="M86,562 L86,583 L692,583 L692,562Z"/><path fill="currentColor" d="M826,562 L826,583 L1202,583 L1202,562Z"/><path fill="currentColor" d="M86,532 L87,553 L286,552 L285,532Z"/><path fill="currentColor" d="M522,533 L523,553 L692,553 L692,532Z"/><path fill="currentColor" d="M826,532 L826,553 L916,553 L916,532Z"/><path fill="currentColor" d="M997,532 L997,553 L1202,553 L1202,532Z"/><path fill="currentColor" d="M86,503 L86,523 L286,522 L285,502Z"/><path fill="currentColor" d="M522,503 L523,523 L692,523 L692,502Z"/><path fill="currentColor" d="M826,502 L826,523 L916,523 L916,502Z"/><path fill="currentColor" d="M997,502 L997,523 L1202,523 L1202,502Z"/><path fill="currentColor" d="M87,472 L87,493 L285,493 L285,472Z"/><path fill="currentColor" d="M522,473 L523,493 L692,493 L692,472Z"/><path fill="currentColor" d="M826,473 L826,493 L916,493 L916,472Z"/><path fill="currentColor" d="M997,472 L997,493 L1202,493 L1202,472Z"/><path fill="currentColor" d="M87,443 L87,463 L286,463 L286,443Z"/><path fill="currentColor" d="M522,443 L522,463 L692,463 L692,443Z"/><path fill="currentColor" d="M826,443 L826,463 L916,463 L916,443Z"/><path fill="currentColor" d="M997,443 L997,463 L1202,463 L1202,443Z"/><path fill="currentColor" d="M93,433 L286,433 L286,413 L122,413Z"/><path fill="currentColor" d="M522,413 L522,433 L692,433 L692,413Z"/><path fill="currentColor" d="M825,413 L825,433 L918,433 L918,413Z"/><path fill="currentColor" d="M997,413 L997,433 L1190,433 L1160,413Z"/><path fill="currentColor" d="M137,403 L1145,403 L1116,383 L167,383Z"/><path fill="currentColor" d="M182,373 L1101,373 L1071,353 L211,353Z"/><path fill="currentColor" d="M226,343 L1056,343 L1027,323 L256,323Z"/><path fill="currentColor" d="M271,313 L1012,313 L982,293 L300,293Z"/><path fill="currentColor" d="M318,281 L964,281 L935,261 L348,261Z"/><path fill="currentColor" d="M364,250 L526,250 L526,230 L394,230Z"/><path fill="currentColor" d="M771,231 L772,250 L918,250 L889,230Z"/><path fill="currentColor" d="M410,219 L526,219 L526,199 L440,199Z"/><path fill="currentColor" d="M771,199 L772,218 L871,218 L839,197 L772,197Z"/><path fill="currentColor" d="M455,189 L526,189 L526,169 L484,169Z"/><path fill="currentColor" d="M771,169 L771,189 L828,189 L798,169Z"/><path fill="currentColor" d="M499,159 L783,159 L754,139 L529,139Z"/><path fill="currentColor" d="M544,129 L739,129 L709,109 L573,109Z"/><path fill="currentColor" d="M590,98 L693,98 L663,78 L619,78Z"/></symbol></svg>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="d2" viewBox="0 0 100 150"><path pathLength="1" d="M18 44A32 32 0 1 1 74.5 64.6L17 136H85"/></symbol>
-  <symbol id="d9" viewBox="0 0 100 150"><circle pathLength="1" cx="50" cy="48" r="34" transform="rotate(-25 50 48)"/><path pathLength="1" d="M80.8 62.4 39 136"/></symbol>
-</svg>
 
 <header class="top" id="top">
+  <div class="l"><a class="k" href="#haus" data-nav="haus">Das Haus</a><a class="k" href="kompass.html">Gäste Kompass</a><button type="button" class="k" data-open="blick">Alles Wichtige</button></div>
   <a class="logo" href="#start" aria-label="Haus Zweineun"><svg viewBox="0 0 1296 769"><use href="#logo"/></svg></a>
-  <div class="r"><a class="k" href="#buchung">Buchung</a><button class="burger" id="mb" aria-expanded="false" aria-controls="menu" aria-label="Menü"><i></i><i></i></button></div>
+  <div class="r"><a class="k" href="#buchung" data-nav="buchung">Buchung</a><button class="burger" id="mb" aria-expanded="false" aria-controls="menu" aria-label="Menü"><i></i><i></i></button></div>
 </header>
 <nav class="menu" id="menu" aria-label="Menü">
-  <a href="#haus">Das Haus</a><a href="#fakten">Auf einen Blick</a><a href="#ansichten">Innen und Außen</a><a href="#lage">Lage</a><a href="#umgebung">Umgebung</a><a href="#jahr">Das ganze Jahr</a><a href="#buchung">Buchung</a>
+  <a href="#haus">Das Haus</a><a href="#innen">Innen</a><a href="#aussen">Aussen</a><a href="kompass.html">Gäste Kompass</a><a href="#jahr">Das ganze Jahr</a><button type="button" data-open="blick">Alles Wichtige</button><a href="#buchung">Buchung</a>
   <a class="sm" href="mailto:hello@hauszweineun.de">hello@hauszweineun.de</a>
 </nav>
 
 <main>
 <section class="hero" id="start">
   <img id="himg" alt="Haus Zweineun" decoding="async" fetchpriority="high">
-  <svg class="num n2" id="n2" viewBox="0 0 100 150" aria-hidden="true"><use href="#d2"/></svg>
-  <svg class="num n9" id="n9" viewBox="0 0 100 150" aria-hidden="true"><use href="#d9"/></svg>
-  <a class="cue" id="cue" href="#haus"><span class="l"></span><span class="l"></span><span class="l"></span><span class="k">Scrollen</span></a>
+  <h1 aria-label="Haus Zweineun"><span>Haus</span><span>Zwei</span><span>Neun</span></h1>
+  <p class="sub">Design-Ferienhaus in Brodersby an der Schlei</p>
 </section>
 
-<section class="band title w" id="haus">
-  <div data-r>
-    <svg class="mark" viewBox="0 0 1296 769" role="img" aria-label="Haus Zweineun"><path class="rf" d="M1281,445 L946,219 L946,81 L886,81 L885,178 L669,33 L645,15 L5,447 L22,471 L641,54 L676,76 L1263,472Z"/><path class="s" style="--i:0" d="M86,742 L86,762 L1202,762 L1202,742Z"/><path class="s" style="--i:1" d="M86,712 L86,732 L1202,732 L1202,712Z"/><path class="s" style="--i:2" d="M86,682 L86,702 L692,702 L692,682Z"/><path class="s" style="--i:2" d="M826,682 L826,702 L1202,702 L1202,682Z"/><path class="s" style="--i:3" d="M86,652 L86,672 L692,672 L692,652Z"/><path class="s" style="--i:3" d="M826,652 L826,672 L1202,672 L1202,652Z"/><path class="s" style="--i:4" d="M86,622 L86,642 L692,642 L692,622Z"/><path class="s" style="--i:4" d="M826,622 L826,642 L1202,642 L1202,622Z"/><path class="s" style="--i:5" d="M86,592 L87,613 L692,613 L692,592Z"/><path class="s" style="--i:5" d="M826,592 L827,613 L1202,613 L1202,592Z"/><path class="s" style="--i:6" d="M86,562 L86,583 L692,583 L692,562Z"/><path class="s" style="--i:6" d="M826,562 L826,583 L1202,583 L1202,562Z"/><path class="s" style="--i:7" d="M86,532 L87,553 L286,552 L285,532Z"/><path class="s" style="--i:7" d="M522,533 L523,553 L692,553 L692,532Z"/><path class="s" style="--i:7" d="M826,532 L826,553 L916,553 L916,532Z"/><path class="s" style="--i:7" d="M997,532 L997,553 L1202,553 L1202,532Z"/><path class="s" style="--i:8" d="M86,503 L86,523 L286,522 L285,502Z"/><path class="s" style="--i:8" d="M522,503 L523,523 L692,523 L692,502Z"/><path class="s" style="--i:8" d="M826,502 L826,523 L916,523 L916,502Z"/><path class="s" style="--i:8" d="M997,502 L997,523 L1202,523 L1202,502Z"/><path class="s" style="--i:9" d="M87,472 L87,493 L285,493 L285,472Z"/><path class="s" style="--i:9" d="M522,473 L523,493 L692,493 L692,472Z"/><path class="s" style="--i:9" d="M826,473 L826,493 L916,493 L916,472Z"/><path class="s" style="--i:9" d="M997,472 L997,493 L1202,493 L1202,472Z"/><path class="s" style="--i:10" d="M87,443 L87,463 L286,463 L286,443Z"/><path class="s" style="--i:10" d="M522,443 L522,463 L692,463 L692,443Z"/><path class="s" style="--i:10" d="M826,443 L826,463 L916,463 L916,443Z"/><path class="s" style="--i:10" d="M997,443 L997,463 L1202,463 L1202,443Z"/><path class="s" style="--i:11" d="M93,433 L286,433 L286,413 L122,413Z"/><path class="s" style="--i:11" d="M522,413 L522,433 L692,433 L692,413Z"/><path class="s" style="--i:11" d="M825,413 L825,433 L918,433 L918,413Z"/><path class="s" style="--i:11" d="M997,413 L997,433 L1190,433 L1160,413Z"/><path class="s" style="--i:12" d="M137,403 L1145,403 L1116,383 L167,383Z"/><path class="s" style="--i:13" d="M182,373 L1101,373 L1071,353 L211,353Z"/><path class="s" style="--i:14" d="M226,343 L1056,343 L1027,323 L256,323Z"/><path class="s" style="--i:15" d="M271,313 L1012,313 L982,293 L300,293Z"/><path class="s" style="--i:16" d="M318,281 L964,281 L935,261 L348,261Z"/><path class="s" style="--i:17" d="M364,250 L526,250 L526,230 L394,230Z"/><path class="s" style="--i:17" d="M771,231 L772,250 L918,250 L889,230Z"/><path class="s" style="--i:18" d="M410,219 L526,219 L526,199 L440,199Z"/><path class="s" style="--i:18" d="M771,199 L772,218 L871,218 L839,197 L772,197Z"/><path class="s" style="--i:19" d="M455,189 L526,189 L526,169 L484,169Z"/><path class="s" style="--i:19" d="M771,169 L771,189 L828,189 L798,169Z"/><path class="s" style="--i:20" d="M499,159 L783,159 L754,139 L529,139Z"/><path class="s" style="--i:21" d="M544,129 L739,129 L709,109 L573,109Z"/><path class="s" style="--i:22" d="M590,98 L693,98 L663,78 L619,78Z"/></svg>
-    <h1 class="h">Haus Zweineun</h1>
-    <p class="sub">Design-Ferienhaus in Brodersby an der Schlei</p>
-  </div>
+<!-- MANIFEST: Introsatz 1:1 von hauszweineun.de, Hauptwörter in Versalien gesetzt -->
+<section class="mani" id="haus">
+  <div class="pin"><p id="mani">Die inspirierende <b>Idylle</b> dieses besonderen <b>Blockhauses</b> von <b>Honka</b> aus den 1970er Jahren an diesem einzigartigen <b>Ort</b>, direkt an der <b>Schlei</b> gelegen, hat uns sofort in ihren <b>Bann</b> gezogen.</p></div>
+  <div class="fls"><figure class="fl f1" data-img="f1" data-sp=".18"></figure><figure class="fl f2" data-img="f2" data-sp="-.12"></figure><figure class="fl f3" data-img="f3" data-sp=".1"></figure><figure class="fl f4" data-img="f4" data-sp="-.2"></figure></div>
 </section>
 
-<section class="sec intro">
+<section class="sec feat" id="presse">
   <div class="row">
-    <p class="lead" data-r>Die inspirierende Idylle dieses besonderen Blockhauses von Honka aus den 1970er Jahren an diesem einzigartigen Ort, direkt an der Schlei gelegen, hat uns sofort in ihren Bann gezogen.</p>
-    <div class="nums" data-r>
-      <div><b>57 qm</b><span>Blockhaus von Honka</span></div>
-      <div><b>2 Personen</b><span>max. vier Personen</span></div>
-      <div><b>Ab 140 Euro</b><span>pro Nacht</span></div>
-      <div><b>Klein Westerland</b><span>der Strand, fußläufig</span></div>
-    </div>
-  </div>
-  <div class="row pair">
-    <figure class="a" data-img="p1" data-r></figure>
-    <figure class="b" data-img="p2" data-r></figure>
-  </div>
-  <div class="row">
-    <p class="more" data-r>Fußläufig ist der Strand „Klein Westerland“ erreichbar. Wir haben uns als überzeugte Großstädter sehr schnell geerdet gefühlt und konnten ganz intuitiv unseren Blick wieder auf das Wesentliche richten. Damit Sie als Gäste sich in unserem Design-Ferienhaus HAUS ZWEINEUN, das bestens für zwei Personen ausgelegt ist, von Anfang ebenso von Ihrem Alltagsstress gelöst fühlen, haben wir all unsere Affinität und Begeisterung für das Schöne und Besondere in die Einrichtung und Ausstattung des HAUS ZWEINEUN bei der Renovierung 2019 eingebracht.</p>
-  </div>
-  <div class="row big"><figure data-img="big" data-r></figure></div>
-</section>
-
-<!-- AUF EINEN BLICK: Fakten aus hauszweineun.de (Innenansichten, Aussenansichten, Buchung) -->
-<section class="sec facts" id="fakten" style="padding-top:0">
-  <div class="head w" data-r><h2 class="h">Auf einen Blick</h2><p class="sub">Fladenweg 29, 24864 Brodersby</p></div>
-  <div class="row"><dl data-r>
-    <div class="it"><dt class="k">Haus</dt><dd>Blockhaus von Honka aus den 1970er Jahren, Renovierung 2019. 57 qm, offen gestalteter Wohn- und Küchenbereich, offene Galerie unterm Dach.</dd></div>
-    <div class="it"><dt class="k">Gäste</dt><dd>Bestens für zwei Personen ausgelegt, max. vier Personen. Kinder ab 8 Jahren. Die Galerie kann auf Anfrage gegen Aufpreis als weiterer Schlafraum genutzt werden.</dd></div>
-    <div class="it"><dt class="k">Lage</dt><dd>Direkt an der Schlei, am Ende einer ruhigen Sackgasse. Fußläufig ist der Strand „Klein Westerland“ erreichbar. Ein Parkplatz ist auf dem Grundstück vorhanden.</dd></div>
-    <div class="it"><dt class="k">Schlafen</dt><dd>1,60 m breites Bett von Woodboom, Bio-Bettwäsche und Bio-Handtücher. Verspiegeltes Schlafzimmerfenster mit Blick auf die Schlei.</dd></div>
-    <div class="it"><dt class="k">Wohnen</dt><dd>Kaminofen von Morsoe, zwei Körbe Feuerholz kostenlos. Sessel von Hans Wegner, Leseleuchte von Arne Jacobsen, Schaukelstuhl von Illum Wikkelsø. Bluetooth-Lautsprecher, Bücher über Architektur und die Umgebung.</dd></div>
-    <div class="it"><dt class="k">Küche</dt><dd>Alle Kochutensilien für ein Menü vorhanden, Moccamaster. Bei Anreise eine kleine Auswahl an BIO-Lebensmitteln, Wasser, Kaffee, Wein und Tees im Haus.</dd></div>
-    <div class="it"><dt class="k">Draußen</dt><dd>Überdachte Terrasse mit verglasten Seiten, offene Sonnenterrasse mit Lounge-Liegen von Skagerak, Feuerschale, Naturgarten.</dd></div>
-    <div class="it"><dt class="k">W-LAN</dt><dd>Kostenfrei und schnell, in allen Räumen und auf der Terrasse.</dd></div>
-    <div class="it"><dt class="k">Preis</dt><dd>Ab 140 Euro pro Nacht für 2 Personen, inklusive Endreinigung, BIO-Wäschepaket, Servicegebühr, Wasser, Strom und Heizung. Mindestmietdauer 3 Nächte, in der Hauptsaison 7 Nächte.</dd></div>
-    <div class="it"><dt class="k">Gut zu wissen</dt><dd>Im Haus wird nicht geraucht. Haustiere müssen zu Hause bleiben. Kaution 300 Euro. Persönlicher Empfang bei Anreise.</dd></div>
-  </dl></div>
-</section>
-
-<!-- KUNST: Text 1:1 von hauszweineun.de/innenansichten -->
-<section class="split band">
-  <div class="txt" data-r>
-    <h2 class="h">Das ist Kunst</h2>
-    <p class="sub">und muss so sein</p>
-    <p>Die komplette Galerie der Gemälde finden Sie samt Beschreibung und unserer persönlichen Geschichte auf unserer Instagram-Seite.</p>
-    <a class="lnk" href="https://www.instagram.com/haus_zweineun/" target="_blank" rel="noopener">Instagram</a>
-  </div>
-  <figure data-img="kunst"></figure>
-</section>
-
-<section class="sec" id="ansichten">
-  <div class="row two">
-    <div class="c" data-r><figure data-img="innen"></figure><h3>Innenansichten</h3><p class="sub">Gutes Licht, komfortabler Freiraum und Wohlfühl-Situationen</p><p>waren unsere wichtigsten Ratgeber für die Einrichtung des HAUS ZWEINEUN. Die Sessel von Hans Wegner und die Leseleuchte Arne Jacobsen von passen unserer Meinung nach perfekt zusammen, um die besondere Note des HAUS ZWEINEUN zu unterstreichen.</p></div>
-    <div class="c" data-r><figure data-img="aussen"></figure><h3>Aussenansichten</h3><p class="sub">Auf der Sonnenseite des Lebens</p><p>Die Lounge-Liegen und der Lounge-Tisch von Skagerak auf der offenen Sonnenterrasse laden zu einem kurzen Power-Nap oder ausgiebigem Sonnenbad ein.</p></div>
-  </div>
-  <div class="row tri"><figure data-img="t1" data-r></figure><figure data-img="t2" data-r></figure><figure data-img="t3" data-r></figure></div>
-</section>
-
-<!-- LAGE: eigene Karte der Schlei aus OpenStreetMap-Daten -->
-<section class="sec band lage" id="lage">
-  <div class="head w" data-r><h2 class="h">Lage und Empfehlungen</h2><p class="sub">Genießen Sie natürliche Stille, das blaue Wasser des Schleifjords und das Grün der Wälder.</p></div>
-  <div class="row">
-    <div class="map" data-r><svg id="map" viewBox="0 0 100 80" aria-label="Karte der Empfehlungen"><path class="water" id="water"/><path class="fine" id="fine" style="display:none"/><g id="towns"></g><g id="pts"></g><g id="home"><circle id="homec"/><use href="#logo" width="34" height="20"/></g></svg></div>
-    <div class="side" data-r>
-      <div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-set="schlei">Schlei</button><button role="tab" aria-selected="false" data-set="brodersby">Brodersby</button></div>
-      <ol class="plist" id="plist"></ol>
-      <p class="addr">Fladenweg 29, 24864 Brodersby<br><a class="lnk" href="https://www.google.com/maps?daddr=Fladenweg+29+24864+Brodersby" target="_blank" rel="noopener">Anfahrt planen</a></p>
+    <div class="fr" data-r>
+      <span class="k">Vorgestellt in</span>
+      <a class="lg mv" href="https://hamburg.mitvergnuegen.com/2022/heimaturlaub-haus-zweineun-an-der-schlei/" target="_blank" rel="noopener" aria-label="Mit Vergnügen Hamburg"><svg aria-hidden="true" focusable="false" viewBox="0 0 122 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M88.2372 57.9348C93.0605 57.9348 93.3442 49.1739 93.3442 35.3261C93.3442 34.7609 91.6419 33.3478 90.7907 33.3478C90.507 33.3478 90.2233 33.6304 90.2233 34.1957C89.0884 38.7174 88.8046 40.9783 86.8186 44.3696L87.9535 44.087C87.6698 43.8043 86.8186 41.2609 87.1023 38.4348C87.1023 35.6087 88.2372 31.3696 89.6558 31.3696C90.507 31.3696 91.6419 32.2174 91.9256 32.2174C92.2093 32.2174 92.493 31.6522 92.493 31.3696C92.493 31.087 90.507 29.3913 88.8046 29.3913C85.1163 29.3913 84.2651 35.8913 84.2651 38.1522C83.9814 41.5435 85.1163 43.8044 85.9674 44.6522C86.2512 44.9348 88.2372 45.5 88.5209 45.2174C89.6558 43.8043 90.7907 40.6957 91.6419 36.1739H90.7907C90.7907 46.6304 90.7907 55.9565 87.386 55.9565C85.4 55.9565 82.8465 54.5435 82.8465 53.413C82.8465 52.2826 86.2512 50.0217 91.0744 48.6087V46.6304C85.1163 48.3261 80.8605 51.1522 80.8605 53.413C80.8605 55.9565 85.1163 57.9348 88.2372 57.9348ZM92.7767 46.3478V48.3261C95.0465 47.7609 97.6 47.4783 99.8698 47.4783C106.112 47.4783 110.084 49.4565 112.637 50.587C113.488 51.1522 114.34 51.7174 114.907 51.7174C115.758 51.7174 116.042 50.587 116.042 50.0217C116.042 47.1957 110.935 45.2174 103.274 45.2174C99.8698 44.9348 96.1814 45.5 92.7767 46.3478ZM32.3442 45.7826C29.7907 56.2391 26.386 59.6304 25.5349 59.6304C24.6837 59.6304 23.8326 57.087 23.8326 53.6957C23.8326 49.7391 24.9674 46.913 25.8186 46.913C26.1023 46.913 26.6698 47.4783 26.6698 50.0217C26.6698 52.8478 25.8186 54.8261 23.2651 57.6522C20.7116 60.7609 17.8744 63.3043 17.5907 63.3043C17.307 63.8696 18.1581 65 18.7256 64.4348C19.5767 63.587 21.5628 61.6087 24.1163 59.0652C26.6698 56.5217 28.6558 52.5652 28.6558 49.7391C28.6558 47.1957 26.9535 45.2174 25.2512 45.2174C22.1302 44.9348 20.7116 49.7391 20.7116 53.413C20.7116 56.8043 21.5628 59.913 22.6977 60.4783C23.2651 60.7609 24.9674 61.3261 25.2512 61.3261C26.9535 61.3261 29.7907 59.0652 33.1953 48.3261L32.3442 45.7826ZM113.205 38.7174C113.205 39.5652 114.907 40.413 115.758 40.413C116.893 40.413 119.73 36.4565 121.716 31.6522C122 31.087 122 30.5217 122 29.9565C122 29.1087 121.716 28.8261 121.433 28.8261C121.433 28.8261 121.149 28.8261 121.149 29.1087C119.73 33.0652 117.744 36.1739 115.758 38.4348L116.042 39.2826C116.042 34.4783 117.177 26.2826 117.177 24.587C117.177 23.7391 115.758 23.1739 114.907 23.1739C113.772 23.1739 110.367 29.9565 108.381 36.7391L108.949 36.4565C109.516 31.6522 109.8 29.6739 109.8 28.2609C109.8 27.413 107.814 26.5652 107.247 26.5652C106.963 26.5652 106.679 26.8478 106.679 27.413C106.679 30.5217 106.679 35.3261 106.679 38.1522C106.679 39 108.381 39.5652 108.949 39.5652C109.233 39.5652 109.233 39.2826 109.516 38.7174C111.219 33.0652 113.205 28.8261 114.623 26.2826L114.34 26.5652C113.488 29.9565 113.205 35.6087 113.205 38.7174ZM106.395 26.8478C103.842 36.7391 100.721 40.6957 99.8698 40.6957C99.0186 40.6957 98.4512 38.1522 98.4512 35.0435C98.4512 31.6522 99.586 28.5435 100.437 28.5435C101.005 28.5435 101.288 29.6739 101.288 31.3696C101.288 34.7609 99.3023 36.1739 99.3023 37.0217C99.3023 37.587 99.586 37.8696 100.153 37.587C102.423 35.8913 103.558 33.3478 103.558 31.6522C103.558 29.1087 102.14 27.1304 99.8698 27.1304C97.0326 27.1304 95.3302 30.8043 95.3302 35.0435C95.3302 39.2826 96.4651 41.2609 97.3163 41.8261C97.8837 42.1087 99.3023 42.6739 99.8698 42.6739C101.288 42.6739 104.409 39.5652 107.247 29.3913L106.395 26.8478ZM58.1628 13.8478C58.4465 11.587 58.7302 9.32609 58.7302 7.91304C58.7302 6.78261 56.4605 5.65217 55.893 5.65217C55.6093 5.65217 55.3256 5.65217 55.3256 6.5C55.3256 8.76087 55.3256 11.0217 55.3256 12.7174C55.3256 13.5652 57.0279 14.413 57.8791 14.413C57.8791 14.413 58.1628 14.413 58.1628 13.8478ZM73.4837 36.1739C73.4837 35.6087 72.3488 34.7609 71.214 34.7609C70.6465 34.7609 70.3628 35.3261 70.3628 35.6087C70.3628 36.7391 70.3628 37.587 70.3628 38.4348V40.1304C70.3628 41.5435 70.3628 43.2391 70.3628 45.5C70.3628 46.6304 72.0651 47.7609 73.2 47.7609C74.3349 47.7609 76.3209 45.5 78.8744 35.3261L78.307 35.0435C77.7395 41.5435 77.4558 44.3696 77.4558 45.7826C77.4558 46.6304 78.8744 47.4783 80.0093 47.4783C80.293 47.4783 80.5767 47.4783 80.8605 46.913C81.9953 45.5 83.6977 41.2609 85.1163 37.3044V33.3478C84.2651 35.6087 81.1442 43.5217 80.293 45.5L80.5767 46.0652C80.5767 43.5217 81.1442 36.7391 81.1442 33.6304C81.1442 32.7826 79.4419 31.9348 78.5907 31.9348C78.307 31.9348 78.0233 32.2174 78.0233 33.0652C76.3209 41.2609 74.6186 44.6522 74.0512 44.6522C73.7674 44.6522 73.7674 44.3696 73.7674 43.8043C73.2 41.2609 73.4837 39 73.4837 36.1739ZM43.693 42.3913C42.5581 45.2174 40.2884 49.1739 39.1535 51.1522L40.0047 50.8696C39.7209 50.0217 39.1535 47.7609 39.1535 46.913C39.1535 44.6522 40.5721 40.6957 40.5721 39.5652C40.2884 39 39.1535 39.8478 38.586 40.9783C37.7349 44.3696 36.6 49.4565 35.4651 57.087L36.0326 58.5C36.0326 53.413 36.0326 50.8696 35.7488 46.3478C35.7488 46.0652 34.0465 45.2174 33.1953 45.2174C32.9116 45.2174 32.6279 45.5 32.6279 45.7826C32.9116 50.3044 33.1953 54.2609 33.7628 58.2174C33.7628 59.0652 35.1814 59.3478 35.7488 59.3478C36.0326 59.3478 36.3163 59.3478 36.3163 58.5C37.7349 50.8696 39.1535 44.9348 40.5721 39.2826C40.5721 38.7174 38.8698 37.8696 38.0186 37.8696C37.1674 37.8696 36.3163 40.1304 36.3163 42.3913C36.3163 46.3478 38.0186 51.7174 39.7209 51.7174C40.8558 51.7174 43.1256 47.1957 44.2605 44.3696L43.693 42.3913ZM0.283721 37.587C2.83721 52.5652 5.10698 63.587 8.22791 76.0217C8.51163 76.8696 11.6326 78 12.2 78C12.4837 78 13.0512 78 13.0512 77.1522C15.8884 55.3913 18.7256 40.6957 22.1302 24.587C22.1302 23.4565 20.9953 21.7609 20.4279 21.7609C19.8605 21.7609 19.5767 22.0435 19.293 22.8913C15.6047 40.9783 13.3349 54.8261 11.0651 75.7391L11.9163 74.3261C9.36279 62.4565 7.09302 50.587 5.3907 37.8696C5.3907 37.0217 1.98605 35.3261 0.851163 35.3261C0.283721 35.3261 0 35.6087 0 36.1739C0 36.4565 -2.74805e-07 37.0217 0.283721 37.587ZM62.4186 50.0217C62.4186 50.8696 63.8372 51.7174 64.9721 51.7174C65.2558 51.7174 65.5395 51.4348 66.107 50.8696C68.6605 46.913 69.5116 42.9565 71.214 38.1522L70.6465 35.6087C68.9442 41.2609 67.2419 45.5 65.2558 49.7391L65.5395 50.587C65.5395 45.7826 66.3907 38.7174 66.3907 37.0217C66.3907 36.1739 64.9721 35.6087 64.1209 35.6087C62.986 35.6087 59.8651 42.3913 57.5953 49.1739L58.1628 48.8913C58.4465 44.087 58.7302 42.1087 58.7302 40.413C58.7302 39.5652 56.7442 38.7174 56.1767 38.7174C55.893 38.7174 55.6093 39 55.6093 39.5652C55.3256 42.1087 55.6093 47.4783 55.6093 50.0217C55.6093 50.8696 57.3116 51.7174 57.8791 51.7174C58.1628 51.7174 58.4465 51.4348 58.4465 50.8696C60.4326 45.2174 62.1349 40.6957 63.5535 38.1522L63.2698 38.4348C62.7023 42.3913 62.4186 46.913 62.4186 50.0217ZM54.7581 17.8043C53.3395 22.8913 51.9209 26.8478 49.9349 31.9348H50.5023C49.3674 21.7609 49.0837 13.2826 48.5163 2.54348C48.5163 1.69565 45.9628 0 45.3953 0C44.8279 0 44.8279 0.565217 44.2605 2.26087C41.9907 11.0217 39.7209 19.7826 38.0186 28.8261L38.586 29.9565C37.1674 20.6304 36.3163 11.587 36.0326 4.52174C36.0326 3.3913 33.7628 2.26087 32.9116 2.26087C32.0605 2.26087 31.7767 3.3913 31.493 4.52174C28.0884 16.9565 25.5349 29.1087 23.5488 39.8478C23.5488 40.413 24.9674 41.5435 25.5349 41.5435C25.8186 41.5435 26.1023 41.2609 26.1023 40.6957C27.8046 28.2609 30.0744 16.9565 32.9116 5.93478L32.3442 5.08696C32.9116 12.1522 34.0465 22.0435 35.4651 29.6739C35.7488 30.8043 37.7349 31.6522 38.586 31.6522C39.1535 31.6522 39.4372 31.3696 39.7209 29.3913C41.707 19.7826 43.693 11.3043 45.6791 3.39131L45.1116 2.54348C45.3953 13 45.9628 24.3043 46.814 32.2174C46.814 33.0652 49.3674 33.913 49.9349 33.913C50.2186 33.913 50.5023 33.913 51.3535 32.2174C53.0558 27.9783 54.4744 23.7391 55.6093 20.3478L54.7581 17.8043ZM55.3256 39.8478C53.3395 50.587 46.2465 58.5 42.5581 62.4565C41.1395 63.8696 40.2884 65 40.2884 65.8478C40.2884 67.5435 42.8419 69.8043 46.5302 69.8043C51.0698 69.8043 51.9209 63.3044 51.9209 45.5C51.9209 44.9348 50.2186 43.5217 49.3674 43.5217C49.0837 43.5217 49.0837 43.8044 48.8 44.3696C48.2326 48.0435 47.3814 51.1522 45.9628 53.9783H46.5302C46.2465 53.1304 45.6791 51.1522 45.6791 48.6087C45.6791 45.7826 46.814 41.2609 48.2326 41.2609C48.8 41.2609 49.9349 42.1087 50.2186 42.1087C50.5023 42.1087 50.786 41.5435 50.786 41.2609C50.786 40.9783 48.8 39.2826 47.0977 39.2826C43.1256 39.2826 42.5581 45.7826 42.5581 47.7609C42.5581 51.1522 43.4093 53.9783 44.2605 54.5435C44.5442 54.8261 46.5302 55.1087 46.5302 54.8261C47.6651 53.413 48.8 50.3044 49.9349 46.0652H49.3674C49.3674 58.2174 49.0837 67.8261 45.9628 67.8261C44.2605 67.8261 42.5581 66.9783 42.5581 65.5652C42.5581 64.7174 43.693 63.587 44.8279 61.8913C48.2326 58.2174 53.907 51.1522 56.1767 41.5435L55.3256 39.8478ZM54.4744 30.2391C54.4744 31.087 56.7442 31.9348 57.3116 31.9348C57.5953 31.9348 58.1628 31.3696 58.4465 30.8043C60.4326 27.9783 62.1349 24.8696 64.1209 20.6304L63.5535 18.3696C61.5674 23.1739 59.2977 27.1304 57.3116 30.2391V31.087C57.5953 25.7174 57.8791 20.3478 57.8791 18.9348C57.8791 18.3696 55.893 17.2391 55.3256 17.2391C55.0419 17.2391 54.7581 17.5217 54.7581 18.087C54.7581 22.3261 54.4744 27.1304 54.4744 30.2391ZM65.5395 32.2174C65.8233 24.0217 66.6744 11.0217 66.6744 5.36957C66.6744 4.80435 64.6884 3.67391 64.1209 3.39131C63.5535 3.39131 63.5535 3.67391 63.5535 4.23913C63.2698 11.587 62.4186 26 62.4186 31.087C62.4186 31.6522 63.8372 32.5 64.6884 32.5C65.5395 33.0652 65.5395 32.7826 65.5395 32.2174ZM79.1581 27.9783C79.4419 26.8478 79.7256 22.0435 79.7256 21.1957C79.7256 20.6304 79.7256 20.0652 78.8744 20.0652C77.7395 20.0652 76.6047 20.6304 76.6047 21.4783C76.3209 23.1739 76.6047 25.1522 76.6047 26.8478C76.6047 27.9783 76.8884 29.1087 78.5907 29.1087C78.5907 28.8261 78.8744 28.5435 79.1581 27.9783ZM74.0512 30.2391C74.3349 27.413 74.6186 22.6087 74.6186 21.7609C74.6186 21.1957 74.6186 20.6304 73.7674 20.6304C72.6326 20.6304 71.214 21.1957 71.214 22.0435C71.214 24.587 71.214 26.8478 71.214 28.5435C71.214 29.6739 71.4977 30.8043 73.2 30.8043C73.7674 30.8043 73.7674 30.8043 74.0512 30.2391ZM85.9674 7.91304C84.5488 7.91304 63.8372 14.9783 59.014 16.6739C58.7302 16.6739 58.7302 16.9565 58.7302 17.2391C58.7302 17.8043 59.2977 18.3696 59.8651 18.3696C60.4326 18.3696 74.9023 14.413 84.8326 11.8696C85.9674 11.587 86.5349 9.8913 86.5349 8.76087C86.5349 7.91304 86.2512 7.91304 85.9674 7.91304Z" fill="currentColor"/>
+</svg></a>
+      <a class="lg fw" href="https://ferienamwasser.reisen/angebot/0rrhz3/haus-zweineun-direkt-an-der-schlei" target="_blank" rel="noopener" aria-label="Ferien am Wasser"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="36 -696 9635 710"><path fill="currentColor" d="M609 -460V-602H36V-686H702V-460ZM36 0V-84H403V0ZM165 -47V-638H267V-47ZM210 -295V-372H471V-295ZM427 -202V-465H507V-202ZM1040 14Q991 14 944.5 -1.5Q898 -17 860.5 -47.0Q823 -77 801.0 -121.5Q779 -166 779 -224Q779 -286 801.5 -334.0Q824 -382 862.0 -415.0Q900 -448 947.0 -465.5Q994 -483 1044 -483Q1104 -483 1150.0 -464.5Q1196 -446 1222.5 -412.5Q1249 -379 1249 -334Q1249 -288 1221.5 -257.0Q1194 -226 1150.0 -210.5Q1106 -195 1057 -195Q996 -195 947.5 -209.5Q899 -224 853 -245L852 -305Q905 -282 949.5 -273.0Q994 -264 1036 -264Q1068 -264 1093.5 -272.0Q1119 -280 1135.0 -296.0Q1151 -312 1151 -334Q1151 -366 1123.0 -385.5Q1095 -405 1051 -405Q1018 -405 986.5 -392.5Q955 -380 929.5 -357.0Q904 -334 888.5 -301.5Q873 -269 873 -227Q873 -178 897.0 -142.5Q921 -107 959.5 -88.5Q998 -70 1043 -70Q1099 -70 1141.5 -88.5Q1184 -107 1217 -135L1259 -70Q1231 -46 1198.5 -27.0Q1166 -8 1126.5 3.0Q1087 14 1040 14ZM1500 -236V-314Q1537 -363 1579.0 -401.5Q1621 -440 1666.0 -461.5Q1711 -483 1756 -483H1798V-282H1712V-386Q1681 -386 1646.0 -368.0Q1611 -350 1574.0 -316.5Q1537 -283 1500 -236ZM1327 0V-79H1639V0ZM1433 -22V-471H1532V-22ZM1327 -392V-471H1526V-392ZM1982 -22V-471H2081V-22ZM1876 0V-79H2188V0ZM1876 -392V-471H2058V-392ZM2019 -574Q1988 -574 1965.5 -591.0Q1943 -608 1943 -633Q1943 -661 1965.5 -678.5Q1988 -696 2019 -696Q2054 -696 2076.0 -678.5Q2098 -661 2098 -633Q2098 -608 2076.0 -591.0Q2054 -574 2019 -574ZM2504 14Q2455 14 2408.5 -1.5Q2362 -17 2324.5 -47.0Q2287 -77 2265.0 -121.5Q2243 -166 2243 -224Q2243 -286 2265.5 -334.0Q2288 -382 2326.0 -415.0Q2364 -448 2411.0 -465.5Q2458 -483 2508 -483Q2568 -483 2614.0 -464.5Q2660 -446 2686.5 -412.5Q2713 -379 2713 -334Q2713 -288 2685.5 -257.0Q2658 -226 2614.0 -210.5Q2570 -195 2521 -195Q2460 -195 2411.5 -209.5Q2363 -224 2317 -245L2316 -305Q2369 -282 2413.5 -273.0Q2458 -264 2500 -264Q2532 -264 2557.5 -272.0Q2583 -280 2599.0 -296.0Q2615 -312 2615 -334Q2615 -366 2587.0 -385.5Q2559 -405 2515 -405Q2482 -405 2450.5 -392.5Q2419 -380 2393.5 -357.0Q2368 -334 2352.5 -301.5Q2337 -269 2337 -227Q2337 -178 2361.0 -142.5Q2385 -107 2423.5 -88.5Q2462 -70 2507 -70Q2563 -70 2605.5 -88.5Q2648 -107 2681 -135L2723 -70Q2695 -46 2662.5 -27.0Q2630 -8 2590.5 3.0Q2551 14 2504 14ZM3285 0V-274Q3285 -301 3278.0 -322.5Q3271 -344 3257.5 -359.5Q3244 -375 3224.5 -383.0Q3205 -391 3179 -391Q3152 -391 3124.5 -380.5Q3097 -370 3069.0 -349.5Q3041 -329 3013.5 -300.5Q2986 -272 2958 -236V-316Q2990 -355 3020.5 -386.0Q3051 -417 3081.5 -439.0Q3112 -461 3144.5 -472.0Q3177 -483 3213 -483Q3254 -483 3285.5 -470.5Q3317 -458 3338.5 -432.0Q3360 -406 3371.5 -367.5Q3383 -329 3383 -277V0ZM2791 0V-79H3082V0ZM2897 0V-471H2996V0ZM2791 -392V-471H2975V-392ZM3198 0V-79H3476V0ZM4293 8Q4264 8 4241.0 -6.5Q4218 -21 4204.5 -49.0Q4191 -77 4191 -116V-301Q4191 -337 4174.0 -358.5Q4157 -380 4129.5 -390.0Q4102 -400 4068 -400Q4023 -400 3976.0 -388.0Q3929 -376 3881 -356L3860 -433Q3914 -456 3970.0 -469.5Q4026 -483 4080 -483Q4144 -483 4190.0 -462.0Q4236 -441 4260.5 -400.0Q4285 -359 4285 -297V-124Q4285 -98 4294.0 -86.5Q4303 -75 4319 -75Q4328 -75 4336.0 -78.0Q4344 -81 4350 -83L4371 -12Q4360 -5 4339.5 1.5Q4319 8 4293 8ZM3997 14Q3953 14 3915.0 -3.0Q3877 -20 3854.5 -53.5Q3832 -87 3832 -136Q3832 -186 3860.5 -220.5Q3889 -255 3934.0 -272.5Q3979 -290 4030 -290Q4089 -290 4133.0 -276.5Q4177 -263 4224 -243V-179Q4171 -202 4127.5 -209.5Q4084 -217 4047 -217Q4016 -218 3989.5 -209.0Q3963 -200 3946.0 -183.0Q3929 -166 3929 -139Q3929 -116 3942.0 -100.0Q3955 -84 3976.5 -76.5Q3998 -69 4022 -69Q4048 -69 4081.0 -79.5Q4114 -90 4150.5 -112.0Q4187 -134 4224 -167L4222 -99Q4188 -65 4150.5 -39.5Q4113 -14 4074.5 0.0Q4036 14 3997 14ZM4413 -392V-471H4590V-392ZM4519 -22V-471H4618V-22ZM4413 0V-79H4704V0ZM4880 -22V-280Q4880 -314 4869.5 -338.5Q4859 -363 4838.5 -377.0Q4818 -391 4787 -391Q4753 -391 4717.0 -372.5Q4681 -354 4647.0 -319.0Q4613 -284 4580 -236V-316Q4612 -367 4650.0 -404.5Q4688 -442 4731.5 -462.5Q4775 -483 4821 -483Q4858 -483 4886.5 -470.5Q4915 -458 4936.0 -432.5Q4957 -407 4967.5 -370.0Q4978 -333 4978 -283V-22ZM4794 0V-79H5064V0ZM5238 -22V-280Q5238 -305 5232.5 -325.5Q5227 -346 5215.5 -360.5Q5204 -375 5186.5 -383.0Q5169 -391 5146 -391Q5112 -391 5076.0 -372.5Q5040 -354 5006.0 -319.0Q4972 -284 4940 -236V-316Q4972 -367 5009.5 -404.5Q5047 -442 5090.0 -462.5Q5133 -483 5180 -483Q5216 -483 5245.0 -470.5Q5274 -458 5294.5 -432.5Q5315 -407 5325.5 -370.0Q5336 -333 5336 -283V-22ZM5153 0V-79H5429V0ZM5739 -602V-686H6075V-602ZM6069 14 5837 -635H5948L6137 -68L6104 14ZM6084 14 6061 -46 6299 -671H6336L6357 -577L6120 14ZM6532 14 6284 -574 6320 -671H6356L6596 -68L6566 14ZM6546 14 6523 -46 6710 -635H6813L6582 14ZM6578 -602V-686H6913V-602ZM7426 8Q7397 8 7374.0 -6.5Q7351 -21 7337.5 -49.0Q7324 -77 7324 -116V-301Q7324 -337 7307.0 -358.5Q7290 -380 7262.5 -390.0Q7235 -400 7201 -400Q7156 -400 7109.0 -388.0Q7062 -376 7014 -356L6993 -433Q7047 -456 7103.0 -469.5Q7159 -483 7213 -483Q7277 -483 7323.0 -462.0Q7369 -441 7393.5 -400.0Q7418 -359 7418 -297V-124Q7418 -98 7427.0 -86.5Q7436 -75 7452 -75Q7461 -75 7469.0 -78.0Q7477 -81 7483 -83L7504 -12Q7493 -5 7472.5 1.5Q7452 8 7426 8ZM7130 14Q7086 14 7048.0 -3.0Q7010 -20 6987.5 -53.5Q6965 -87 6965 -136Q6965 -186 6993.5 -220.5Q7022 -255 7067.0 -272.5Q7112 -290 7163 -290Q7222 -290 7266.0 -276.5Q7310 -263 7357 -243V-179Q7304 -202 7260.5 -209.5Q7217 -217 7180 -217Q7149 -218 7122.5 -209.0Q7096 -200 7079.0 -183.0Q7062 -166 7062 -139Q7062 -116 7075.0 -100.0Q7088 -84 7109.5 -76.5Q7131 -69 7155 -69Q7181 -69 7214.0 -79.5Q7247 -90 7283.5 -112.0Q7320 -134 7357 -167L7355 -99Q7321 -65 7283.5 -39.5Q7246 -14 7207.5 0.0Q7169 14 7130 14ZM7825 14Q7790 14 7756.0 5.5Q7722 -3 7690.5 -19.5Q7659 -36 7634.0 -57.5Q7609 -79 7591 -106L7638 -105V1H7565V-152L7606 -156Q7630 -129 7664.5 -104.5Q7699 -80 7738.0 -65.0Q7777 -50 7816 -50Q7841 -50 7859.5 -56.0Q7878 -62 7888.0 -75.0Q7898 -88 7898 -106Q7898 -122 7889.0 -135.0Q7880 -148 7862.0 -158.0Q7844 -168 7817.5 -177.5Q7791 -187 7755 -196Q7700 -211 7658.0 -231.0Q7616 -251 7591.5 -280.5Q7567 -310 7567 -352Q7567 -389 7587.5 -418.5Q7608 -448 7645.0 -466.0Q7682 -484 7732 -484Q7777 -484 7818.5 -469.5Q7860 -455 7892.0 -429.0Q7924 -403 7942 -367L7901 -368V-471H7973V-319L7931 -314Q7912 -347 7882.5 -371.0Q7853 -395 7820.0 -407.5Q7787 -420 7756 -420Q7730 -420 7709.0 -413.0Q7688 -406 7676.0 -393.0Q7664 -380 7664 -362Q7664 -347 7673.5 -335.0Q7683 -323 7701.0 -313.5Q7719 -304 7744.5 -295.0Q7770 -286 7803 -277Q7857 -262 7900.5 -241.5Q7944 -221 7969.5 -190.5Q7995 -160 7995 -114Q7995 -74 7972.0 -45.5Q7949 -17 7910.5 -1.5Q7872 14 7825 14ZM8372 14Q8337 14 8303.0 5.5Q8269 -3 8237.5 -19.5Q8206 -36 8181.0 -57.5Q8156 -79 8138 -106L8185 -105V1H8112V-152L8153 -156Q8177 -129 8211.5 -104.5Q8246 -80 8285.0 -65.0Q8324 -50 8363 -50Q8388 -50 8406.5 -56.0Q8425 -62 8435.0 -75.0Q8445 -88 8445 -106Q8445 -122 8436.0 -135.0Q8427 -148 8409.0 -158.0Q8391 -168 8364.5 -177.5Q8338 -187 8302 -196Q8247 -211 8205.0 -231.0Q8163 -251 8138.5 -280.5Q8114 -310 8114 -352Q8114 -389 8134.5 -418.5Q8155 -448 8192.0 -466.0Q8229 -484 8279 -484Q8324 -484 8365.5 -469.5Q8407 -455 8439.0 -429.0Q8471 -403 8489 -367L8448 -368V-471H8520V-319L8478 -314Q8459 -347 8429.5 -371.0Q8400 -395 8367.0 -407.5Q8334 -420 8303 -420Q8277 -420 8256.0 -413.0Q8235 -406 8223.0 -393.0Q8211 -380 8211 -362Q8211 -347 8220.5 -335.0Q8230 -323 8248.0 -313.5Q8266 -304 8291.5 -295.0Q8317 -286 8350 -277Q8404 -262 8447.5 -241.5Q8491 -221 8516.5 -190.5Q8542 -160 8542 -114Q8542 -74 8519.0 -45.5Q8496 -17 8457.5 -1.5Q8419 14 8372 14ZM8913 14Q8864 14 8817.5 -1.5Q8771 -17 8733.5 -47.0Q8696 -77 8674.0 -121.5Q8652 -166 8652 -224Q8652 -286 8674.5 -334.0Q8697 -382 8735.0 -415.0Q8773 -448 8820.0 -465.5Q8867 -483 8917 -483Q8977 -483 9023.0 -464.5Q9069 -446 9095.5 -412.5Q9122 -379 9122 -334Q9122 -288 9094.5 -257.0Q9067 -226 9023.0 -210.5Q8979 -195 8930 -195Q8869 -195 8820.5 -209.5Q8772 -224 8726 -245L8725 -305Q8778 -282 8822.5 -273.0Q8867 -264 8909 -264Q8941 -264 8966.5 -272.0Q8992 -280 9008.0 -296.0Q9024 -312 9024 -334Q9024 -366 8996.0 -385.5Q8968 -405 8924 -405Q8891 -405 8859.5 -392.5Q8828 -380 8802.5 -357.0Q8777 -334 8761.5 -301.5Q8746 -269 8746 -227Q8746 -178 8770.0 -142.5Q8794 -107 8832.5 -88.5Q8871 -70 8916 -70Q8972 -70 9014.5 -88.5Q9057 -107 9090 -135L9132 -70Q9104 -46 9071.5 -27.0Q9039 -8 8999.5 3.0Q8960 14 8913 14ZM9373 -236V-314Q9410 -363 9452.0 -401.5Q9494 -440 9539.0 -461.5Q9584 -483 9629 -483H9671V-282H9585V-386Q9554 -386 9519.0 -368.0Q9484 -350 9447.0 -316.5Q9410 -283 9373 -236ZM9200 0V-79H9512V0ZM9306 -22V-471H9405V-22ZM9200 -392V-471H9399V-392Z"/></svg></a>
+      <span class="lg sp" role="img" aria-label="selected places"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="21 33 162 86"><path fill="currentColor" d="M26.41,117.22h6.08V106.35l1.28.5a11.750,11.750,0,0,0,1.3.41,10.36,10.36,0,0,0,1.56.29,17.21,17.21,0,0,0,2,.1,13.73,13.73,0,0,0,5.070-1,11.59,11.59,0,0,0,4.55-3.49,13.33,13.33,0,0,0,2.080-3.54,12.74,12.74,0,0,0,.83-4.88A16.71,16.71,0,0,0,50.54,90a12.79,12.79,0,0,0-2-4.08,10.18,10.18,0,0,0-3.41-2.89A10.31,10.31,0,0,0,40.24,82a11.39,11.39,0,0,0-2.73.31,11.81,11.81,0,0,0-2.18.78,8.84,8.84,0,0,0-1.67,1,10.65,10.65,0,0,0-1.17,1.1l-.15-2.76H26.41v34.79Zm6.08-23.61a6,6,0,0,1,.44-2.16,7.24,7.24,0,0,1,1.25-2,6.55,6.550,0,0,1,2-1.54,5.51,5.51,0,0,1,2.55-.59,6.74,6.74,0,0,1,3,.59,5.51,5.51,0,0,1,2,1.62,6.65,6.65,0,0,1,1.09,2.36A12.37,12.37,0,0,1,45,94.76a8.53,8.53,0,0,1-.47,2.8A7.26,7.26,0,0,1,43.18,100,6.94,6.94,0,0,1,41,101.7a6.62,6.62,0,0,1-3,.65q-3.69,0-5.51-1.51V93.61Zm23.35,13.21H62V72.13H55.84v34.69Zm26.48,0H88V90.44a8.75,8.75,0,0,0-.73-3.56,7.93,7.93,0,0,0-2.080-2.81A9.69,9.69,0,0,0,82,82.25a12.88,12.88,0,0,0-4.24-.65,22.52,22.52,0,0,0-3.82.28,18.13,18.13,0,0,0-2.89.73,13.5,13.5,0,0,0-2.18,1,19.51,19.51,0,0,0-1.67,1.070L70,88.83a18.66,18.66,0,0,1,2.76-1.46,10.61,10.61,0,0,1,4.16-.68,6.39,6.39,0,0,1,3.79,1,3.34,3.34,0,0,1,1.46,2.86v.58l-1.92-.11L78.52,91l-1.61,0a15.73,15.73,0,0,0-4.37.57,9.67,9.67,0,0,0-3.38,1.69A7.76,7.76,0,0,0,67,96a8.54,8.54,0,0,0-.78,3.72,7.68,7.68,0,0,0,.76,3.53,7.12,7.12,0,0,0,2,2.47,8.31,8.31,0,0,0,2.71,1.43,9.63,9.63,0,0,0,3,.47,10.72,10.72,0,0,0,4.52-.93,8.43,8.43,0,0,0,3-2.14l.16,2.29Zm-.16-8.63a3.43,3.43,0,0,1-.49,1.77,5.35,5.35,0,0,1-1.28,1.45,6.1,6.1,0,0,1-1.79,1,6.28,6.28,0,0,1-2.11.36,5.22,5.22,0,0,1-3.3-.88,2.92,2.92,0,0,1-1.12-2.44,3.64,3.64,0,0,1,1.2-2.68c.79-.78,2.18-1.17,4.16-1.17l1.38,0,1.53.08,1.82.11v2.39Zm29.39,1.45a7.68,7.68,0,0,1-2.55,1.9,7.79,7.79,0,0,1-3.33.7,6.59,6.59,0,0,1-3.070-.67,6.47,6.47,0,0,1-2.16-1.77,7.38,7.38,0,0,1-1.27-2.44,9.24,9.24,0,0,1-.42-2.76,10,10,0,0,1,.42-2.86,6.8,6.8,0,0,1,1.27-2.45,6.64,6.64,0,0,1,2.16-1.69,6.84,6.84,0,0,1,3.070-.65,7.33,7.33,0,0,1,3.22.68,7.69,7.69,0,0,1,2.45,1.87l3.9-4a12.62,12.62,0,0,0-4.16-2.89,13.43,13.43,0,0,0-5.41-1.060,13.23,13.23,0,0,0-5.33,1,12.69,12.69,0,0,0-4.14,2.81,13,13,0,0,0-2.68,4.13,13.23,13.23,0,0,0-1,5,15.25,15.25,0,0,0,.89,5.31A11.54,11.54,0,0,0,96,104a11.24,11.24,0,0,0,4.11,2.66,15.6,15.6,0,0,0,5.570.93,12.76,12.76,0,0,0,5.46-1.090,13.34,13.34,0,0,0,4.060-2.91l-3.64-4Zm26.31-.1c-.21.21-.51.48-.91.81a7.19,7.19,0,0,1-1.53.93,12,12,0,0,1-2.27.78,12.32,12.32,0,0,1-3.090.34,7.69,7.69,0,0,1-2.42-.41,7.12,7.12,0,0,1-2.18-1.2,6.39,6.39,0,0,1-1.56-1.87,5,5,0,0,1-.6-2.45h18.2v-.88a21.26,21.26,0,0,0-.62-5.1,13.2,13.2,0,0,0-2-4.47,10.46,10.46,0,0,0-3.72-3.2,11.87,11.87,0,0,0-5.64-1.22,12.39,12.39,0,0,0-5,1,11.8,11.8,0,0,0-3.9,2.7,12.35,12.35,0,0,0-2.55,4,13.53,13.53,0,0,0-.91,5,15.32,15.32,0,0,0,.91,5.41,12,12,0,0,0,2.6,4.19,12.090,12.090,0,0,0,4.080,2.73,14,14,0,0,0,5.31,1,16.9,16.9,0,0,0,4.91-.62,15.35,15.35,0,0,0,3.38-1.41,9.71,9.71,0,0,0,2-1.48l.86-.85-3.33-3.75Zm-14.61-7.49a4.68,4.68,0,0,1,.41-1.87,5.34,5.34,0,0,1,1.2-1.69,6.35,6.35,0,0,1,2-1.25,6.81,6.81,0,0,1,2.68-.49,6,6,0,0,1,2.49.49,5.6,5.6,0,0,1,1.8,1.25,5.27,5.27,0,0,1,1.070,1.69,5.17,5.17,0,0,1,.36,1.87Zm21.53,11.81a10.27,10.27,0,0,0,4.42,2.83,18.75,18.75,0,0,0,6.19,1,14.69,14.69,0,0,0,4-.54,11.59,11.59,0,0,0,3.33-1.54,7.51,7.51,0,0,0,2.26-2.41,6.31,6.31,0,0,0,.83-3.2,7.45,7.45,0,0,0-.57-3,6.45,6.45,0,0,0-1.64-2.21,9.45,9.45,0,0,0-2.55-1.56,20.080,20.080,0,0,0-3.35-1,25.87,25.87,0,0,1-4.45-1.38c-.95-.43-1.43-1-1.43-1.79a2,2,0,0,1,.86-1.59,5.27,5.27,0,0,1,3-.65,10.9,10.9,0,0,1,3.8.6,10.63,10.63,0,0,1,2.6,1.33l3.17-4.32a13,13,0,0,0-4.080-2,19.43,19.43,0,0,0-5.49-.67,12.76,12.76,0,0,0-3.61.52,11.36,11.36,0,0,0-3.23,1.48A7.85,7.85,0,0,0,146.6,86a6.070,6.070,0,0,0-.88,3.25,5.92,5.92,0,0,0,.75,3.050,7.7,7.7,0,0,0,1.92,2.18,9.75,9.75,0,0,0,2.53,1.43,21.57,21.57,0,0,0,2.6.83,31.19,31.19,0,0,1,3.22.89,9.14,9.14,0,0,1,1.87.83,2.23,2.23,0,0,1,.89.86,2.18,2.18,0,0,1,.21,1,1.77,1.77,0,0,1-1.2,1.72,8.22,8.22,0,0,1-3.17.52,10,10,0,0,1-4-.76,9,9,0,0,1-2.89-1.9l-3.69,4Z"/><path fill="currentColor" d="M176.49,107.34a4.88,4.88,0,1,0-4.87-4.88,4.88,4.88,0,0,0,4.87,4.88Z"/><path fill="currentColor" d="M49,73.6c3,0,4.33-1.91,4.33-2.79,0-.37-.3-.73-1-.73s-1.91.44-3.080.44a4.54,4.54,0,0,1-4.63-4.7c0-3.090.59-5.58,2.64-6.46,10.21-4.85,12.41-7.13,12.41-11a2.77,2.77,0,0,0-2.86-2.57c-4.33,0-10.13,7.2-12.12,10.65-1.32,2.35-4.77,3.6-7.56,4.92-1,.51-1.61.37-1.83-.52-.89-2.35-2.28-3.81-2.28-7,0-3.68,2.86-5.29,6.46-5.29.29,0,1.76.59,2.35.59,1,0,2-.22,2-1.25,0-.88-.51-1.1-1-1.54s-.88-1-1.61-1.1A10.3,10.3,0,0,0,39.4,45c-4.4,0-9.47,3.52-9.47,8.59,0,4.7,1.91,5.87,2.86,8.37.44.81-.66,1.61-1.54,2s-2,1-3.16,1.47c-3.3,1.39-4.47,3.89-4.47,5.29s1.39,2.71,4.47,2.71c3.82,0,8.37-4.55,8.37-7.93a2.3,2.3,0,0,1,1-2.2c.52-.22,3.67-2,4-2.28s.66.15.66.59a27.69,27.69,0,0,0-.66,4.19c0,5.28,3.74,7.78,7.42,7.78ZM49.39,55c-.08-.22,0-.58.36-1.1,1.76-2.27,4.78-5.14,5.73-5.14a.66.66,0,0,1,.73.74c0,1.69-3.45,4.11-5.87,5.28-.66.3-.81.37-1,.22ZM28.46,70.74a1,1,0,0,1-1-.89,5.2,5.2,0,0,1,2.79-3.23,23.23,23.23,0,0,1,2.43-1.24c.51-.22.66,0,.66.36-.44,2.5-3.16,5-4.85,5Zm47.5,4a7.47,7.47,0,0,0,6.24-3c.52-1,1.11-1.46,1.11-2.42,0-.37,0-1-.3-1s-.66.29-1.1.29-1,1.1-1.39,1.54c-.89.74-2.060,1.69-3.24,1.69a3.62,3.62,0,0,1-3.67-3.6c0-4.4,1.55-7.56,3.16-8.73,5-3.53,8.88-5.58,8.88-9.62a3.37,3.37,0,0,0-3.52-3.45c-3.89,0-6.83,3.81-10.35,12.4a20.66,20.66,0,0,1-1.91,3.6,27.58,27.58,0,0,1-6,6.1c-.58.51-1-.22-1-2.35,0-6.9,2.28-16.67,4.85-25,.15-.44,1.47-1.61,1.47-2,0-.59.66-.81.66-1.25,0-1.24-.29-2.050-1.47-2.050-1,0-2.35,1.32-2.94,1.76-.95.81-1.61,4.11-2.12,6.46-1,4-3.9,19-3.9,24.38a14.43,14.43,0,0,0,.22,2.71,2.12,2.12,0,0,0,2.21,1.62c3.15,0,6.16-5.73,8.22-7.56.66-.59.81.36.59.8a7,7,0,0,0-.3,2.79c0,2.57,1.55,5.8,5.58,5.8Zm.88-18.35c-.44.44-.51.22-.36-.44,1.17-3.67,4.18-6.32,5.28-6.32a.75.75,0,0,1,.74.81c0,2.28-3.6,4.55-5.66,6ZM110.1,78.08c1.4,0,1.76-1,1.76-2.2,0-.67-.22-.81-.22-1.47,0-1.32.67-7.64.67-9.18,0-1.25-.15-2.35-.15-3.89,0-3.23,1-5.14,1.76-7.050.22-.51.51-2.2,1-2.5.29-.070,1-.58,1.39-.66s.51-.73.81-.81a8.21,8.21,0,0,1,1.1-.36c1.1-.44,1-.88,2.28-1,1.46-.37,2.56-.37,2.56-1.1s-.51-1.18-1.46-1.18A28.66,28.66,0,0,0,116.49,48c-.95.36-1.1.070-.95-.67a15.25,15.25,0,0,1,.44-1.68c.51-1.77,2.13-7.71,2.13-9a1.64,1.64,0,0,0-1.84-1.84c-1.69,0-2.060,2-2.060,3a42.52,42.52,0,0,1-2.42,9.4,6,6,0,0,1-2.35,3.16,24.49,24.49,0,0,1-3.080,1c-1.54.44-2.42,1.54-2.42,2.28s1.17,1.76,2.2,1.76a5.45,5.45,0,0,1,1.1-.29c.44,0,.66.14.37.51C100,63.69,96.52,68.68,90.94,68.68a2.69,2.69,0,0,1-2.72-2.57c0-8.74,6.1-15.71,11.090-15.71.73,0,.81.37,1.1.66s.59.59,1.62.59a1.82,1.82,0,0,0,1.83-2c0-.73-.51-1.46-1.76-1.9-.88-.23-1.39-1.33-2.2-1.33-2.65,0-15.2,4.78-15.2,20.12,0,4.19,1.76,6.090,4.55,6.090,5.73,0,8.15-3.45,20.12-16.81a2.12,2.12,0,0,1,1-.66c.36,0,.29.51.29,1.1,0,4.77-2.72,16.37-2.72,18.65,0,2.86.52,3.16,2.13,3.16Zm14-2.94c4.91,0,8.73-4.62,12.55-8.88l.22-.15c.15,0,.29.15.29.44,0,.73-.95,2.94-.95,4.11,0,2.13,1.1,2.94,2.5,2.94,6.68,0,11.3-8.66,16.74-17.92,1-1.61,1.76-2.71,2.050-2.71s.37.29.37,1.1c0,2.13-.080,2.57-.080,7.86,0,1-.73,3.080-.73,3.67V70c0,1.54,1.69,3.23,2.57,3.23a2.58,2.58,0,0,0,1.62-2.2c0-1.54-.81-3.3-.81-4,0-10.2,1.1-19.16,2.79-22.83,1.17-2.35,2.42-5.22,2.42-6.32a2.4,2.4,0,0,0-2.2-2.35c-4.19,0-1.1,5.070-4.48,11-.15.29-.15.44-.51.44-.59,0-1.47-1.54-3.31-1.54-3.38,0-6.17,3.81-12.41,11.3-9,10.8-9.76,14.69-17.47,14.69-1.47,0-2.5-.88-2.5-3.89,0-2.35,1.18-5.73,3.6-6.83,8.080-3.75,13.070-8.52,13.070-13.22A3.26,3.26,0,0,0,136,44.52c-4.7,0-12.34,8.74-13.66,13.15a2.43,2.43,0,0,1-1.47,1.54c-1.32.37-2.35,1.25-2.35,2.2,0,.74.52.88,1,1s.29,1.25.22,1.54a17.44,17.44,0,0,0-.66,5.14c0,3.52,1.83,6,5.070,6Zm2.12-18.43c0-2,7.57-8.37,8.74-8.29a.58.58,0,0,1,.66.66c0,2.79-7.19,7.56-8.88,7.93l-.44-.080-.080-.22Zm15.2,12.12a2.8,2.8,0,0,1-.66.14c-.22,0-.29-.070-.29-.36v-.15c.95-6.090,11-19,13.58-19a1.61,1.61,0,0,1,1.76,1.47c0,.52-1,1.91-1.69,3.090-4.77,7.71-8.66,13.21-12.7,14.83Z"/></svg></span>
     </div>
   </div>
 </section>
 
-<section class="sec" id="umgebung">
-  <div class="head w" data-r><h2 class="h">Umgebung</h2></div>
-  <div class="strip" id="strip" tabindex="0" aria-label="Bilder der Umgebung"></div>
-  <div class="ctl w"><span class="sub" id="stc" style="margin:0"></span><div><button id="sp" aria-label="Zurück"><svg viewBox="0 0 18 18"><path d="M11 3 5 9l6 6"/></svg></button><button id="sn" aria-label="Weiter"><svg viewBox="0 0 18 18"><path d="m7 3 6 6-6 6"/></svg></button></div></div>
-</section>
+<!-- KAPITEL: Texte 1:1 von hauszweineun.de (Innenansichten, Aussenansichten) -->
+<section class="chap" id="innen"><img data-bleed="innen" alt="Innenansicht Haus Zweineun"><h2 aria-label="Innen"><span><i style="--k:0">I</i></span><span><i style="--k:1">n</i></span><span><i style="--k:2">n</i></span><span><i style="--k:3">e</i></span><span><i style="--k:4">n</i></span></h2></section>
+<section class="block"><div class="row">
+  <div class="tx" data-r><p class="d"><i>Gutes Licht,</i> komfortabler <b>Freiraum</b> und Wohlfühl-Situationen</p><p class="t">waren unsere wichtigsten Ratgeber für die Einrichtung des HAUS ZWEINEUN. Die Sessel von Hans Wegner und die Leseleuchte Arne Jacobsen von passen unserer Meinung nach perfekt zusammen, um die besondere Note des HAUS ZWEINEUN zu unterstreichen.</p><button type="button" class="lnk" data-open="blick">Ausstattung ansehen</button></div>
+  <div class="trio"><figure data-img="i1" data-r></figure><figure data-img="i2" data-r style="--d:120ms"></figure><figure data-img="i3" data-r style="--d:240ms"></figure></div>
+</div></section>
 
-<!-- DAS GANZE JAHR: Saison, Preis (Buchung) und je ein Satz von hauszweineun.de -->
-<section class="sec" id="jahr" style="padding-top:0">
-  <div class="head w" data-r><h2 class="h">Das ganze Jahr</h2><p class="sub">Preise für 2 Personen pro Nacht</p></div>
+<section class="chap" id="aussen"><img data-bleed="aussen" alt="Aussenansicht Haus Zweineun"><h2 aria-label="Aussen"><span><i style="--k:0">A</i></span><span><i style="--k:1">u</i></span><span><i style="--k:2">s</i></span><span><i style="--k:3">s</i></span><span><i style="--k:4">e</i></span><span><i style="--k:5">n</i></span></h2></section>
+<section class="block"><div class="row">
+  <div class="tx" data-r><p class="d">Auf der <b>Sonnenseite</b> <i>des Lebens</i></p><p class="t">Die Lounge-Liegen und der Lounge-Tisch von Skagerak auf der offenen Sonnenterrasse laden zu einem kurzen Power-Nap oder ausgiebigem Sonnenbad ein.</p></div>
+  <div class="trio"><figure data-img="a1" data-r></figure><figure data-img="a2" data-r style="--d:120ms"></figure><figure data-img="a3" data-r style="--d:240ms"></figure></div>
+</div></section>
+
+<section class="chap" id="umgebung"><img data-bleed="umgebung" alt="An der Schlei"><h2 aria-label="Schlei"><span><i style="--k:0">S</i></span><span><i style="--k:1">c</i></span><span><i style="--k:2">h</i></span><span><i style="--k:3">l</i></span><span><i style="--k:4">e</i></span><span><i style="--k:5">i</i></span></h2></section>
+<section class="block"><div class="row">
+  <div class="tx" data-r><p class="d">Natürliche <b>Stille,</b> das blaue <b>Wasser</b> <i>des Schleifjords</i> und das Grün der Wälder</p><p class="t">als Aussicht bieten perfekte Bedingungen, die Gedanken einfach mal schweifen zu lassen und sich auf das Wesentliche zurückzubesinnen.</p><a class="lnk" href="kompass.html">Gäste Kompass öffnen</a></div>
+  <div class="trio"><figure data-img="u1" data-r></figure><figure data-img="u2" data-r style="--d:120ms"></figure><figure data-img="u3" data-r style="--d:240ms"></figure></div>
+</div></section>
+
+<!-- DAS GANZE JAHR: Saison und Preis laut Buchungsseite -->
+<section class="sec" id="jahr" style="border-top:1px solid var(--blau)">
   <div class="row yr">
-    <figure data-img="fruehjahr" data-r></figure><figure data-img="sommer" data-r style="--d:90ms"></figure><figure data-img="herbst" data-r style="--d:180ms"></figure><figure data-img="winter" data-r style="--d:270ms"></figure>
-    <div class="sn"><span class="k">Frühjahr</span><div class="p">160 Euro</div><p class="i">Zwischensaison, März bis Ende Mai</p><p class="t">Auf dem Grundstück des HAUS ZWEINEUN, am Ende einer ruhigen Sackgasse gelegen, fühlen sich nicht nur unsere Hausgäste wohl, sondern auch eine Vielzahl an Vögeln. Vom Esstisch aus haben Sie freien Blick auf unser Vogelhaus.</p><a class="lnk" href="#buchung">Termin wählen</a></div>
-    <div class="sn"><span class="k">Sommer</span><div class="p">180 Euro</div><p class="i">Hauptsaison, Juni bis Mitte September</p><p class="t">Unser Tipp an Sie, wenn Sie Anfang bis Mitte August kommen, mit Decken und Kissen eingemummelt auf den Lounge-Liegen nach Sonnenuntergang Sternschnuppen zählen.</p><a class="lnk" href="#buchung">Termin wählen</a></div>
-    <div class="sn"><span class="k">Herbst</span><div class="p">160 Euro</div><p class="i">Zwischensaison, Mitte September bis Ende Oktober</p><p class="t">Auf der überdachten Terrasse sitzen Sie an kühleren Sommerabenden oder bei typisch nordischem Wetter das ganze Jahr über geschützt und doch im Freien.</p><a class="lnk" href="#buchung">Termin wählen</a></div>
-    <div class="sn"><span class="k">Winter</span><div class="p">140 Euro</div><p class="i">Nebensaison, November bis Mitte Dezember, Januar und Februar</p><p class="t">Dank der Wärme aus der Feuerschale, für die selbstverständlich Feuerholz bereitsteht, und einer Decke lässt es sich bei einem heißen Tee oder einem guten Glas Rotwein zu jeder Jahreszeit bestens aushalten.</p><a class="lnk" href="#buchung">Termin wählen</a></div>
+    <div class="hd" data-r><h2 class="h">Das ganze Jahr</h2><span class="k">Preise für 2 Personen pro Nacht</span></div>
+    <div class="sn" data-r><figure data-img="fruehjahr"></figure><span class="k">Frühjahr</span><div class="p">160 Euro</div><p class="i">März bis Ende Mai</p></div>
+    <div class="sn" data-r style="--d:90ms"><figure data-img="sommer"></figure><span class="k">Sommer</span><div class="p">180 Euro</div><p class="i">Juni bis Mitte September</p></div>
+    <div class="sn" data-r style="--d:180ms"><figure data-img="herbst"></figure><span class="k">Herbst</span><div class="p">160 Euro</div><p class="i">Mitte September bis Ende Oktober</p></div>
+    <div class="sn" data-r style="--d:270ms"><figure data-img="winter"></figure><span class="k">Winter</span><div class="p">140 Euro</div><p class="i">November bis Mitte Dezember, Januar und Februar</p></div>
   </div>
 </section>
 
-<section class="sec deep">
-  <div class="row eve">
-    <figure class="a" data-img="eveA" data-r></figure>
-    <blockquote data-r>„Wir wünschen Ihnen einen ganz besonders inspirierenden, entspannenden und kreativitätsfördernden Aufenthalt auf 57 qm im HAUS ZWEINEUN und hoffen sehr, dass Sie sich besonders wohl fühlen!“<cite>Ihre Inken Schwedt &amp; Ihr Thomas Notholt</cite></blockquote>
-    <figure class="b" data-img="eveB" data-r></figure>
-  </div>
+<section class="host w" style="border-top:1px solid var(--blau)">
+  <blockquote data-r>„Wir wünschen Ihnen einen ganz besonders inspirierenden, entspannenden und kreativitätsfördernden Aufenthalt auf 57 qm im HAUS ZWEINEUN und hoffen sehr, dass Sie sich besonders wohl fühlen!“<cite>Ihre Inken Schwedt &amp; Ihr Thomas Notholt</cite></blockquote>
 </section>
 
-<section class="sec" id="buchung">
-  <div class="head w" data-r><h2 class="h">Buchung</h2><p class="sub">Ab 140 Euro pro Nacht</p></div>
+<!-- GÄSTESTIMMEN: Inhalte im Script unter STIMMEN. Bleibt die Liste leer, verschwindet der Block. -->
+<section class="voices" id="stimmen" hidden>
+  <div class="row" data-r><p class="lab k">Gästestimmen</p></div>
+</section>
+
+<section class="sec" id="buchung" style="border-top:1px solid var(--blau)">
+  <div class="head w" data-r><h2 class="d">Buchung</h2><p class="sub">Ab 140 Euro pro Nacht</p></div>
   <div class="row book">
     <div class="calc" data-r>
       <h3>Preisrechner</h3>
@@ -426,78 +578,135 @@ figure img{width:100%;background:rgba(27,51,80,.06)}
       <h3>Belegungskalender</h3>
       <div class="fr"><iframe title="Belegungskalender" loading="lazy" src="https://login.smoobu.com/de/cockpit/widget/show-calendar-iframe/450183/6fb0b5af899457187c845e8cee322fb37442896128318d927035891b9b55b7b9"></iframe></div>
     </div>
-    <div class="info" data-r>
-      <details><summary class="k">Mietpreise</summary><div class="in"><p>Die Preise verstehen sich inklusive persönlichem Empfang bei Anreise oder Verabschiedung (bis auf sonntags) durch einen Ansprechpartner für alle Fragen vor Ort, Endreinigung (100 Euro) und BIO-Wäschepaket (Bettwäsche/Handtücher/Geschirrtücher, Wischlappen) für 2 Personen (50 Euro), Servicegebühr (Euro 40,00), sowie der Kosten für Wasser, Strom und Heizung einschließlich Umsatzsteuer.</p><p>Bei mehr als zwei Gästen erheben wir einen Aufschlag von 30 Euro pro Person und Nacht (Erwachsene ab 17 Jahre), 20 Euro pro Person und Nacht (Kinder von 8 – 16 Jahre) zuzüglich einmalig für BIO-Bettwäsche und BIO-Handtücher 25 Euro pro Person.</p><p>Mindestmietdauer: 3 Nächte in der Zwischen- und Nebensaison, 7 Nächte in der Hauptsaison. Bei Buchungslücken sind auch kürzere Buchungszeiträume nach Absprache möglich. Weihnachten und Ostern gelten als Hauptsaison.</p></div></details>
-      <details><summary class="k">Weitere Informationen</summary><div class="in"><p>Für die Befeuerung des Kamins und der Feuerschale stehen Ihnen zwei Körbe Feuerholz für den Kamin oder die Feuerschale kostenfrei zur Verfügung. Ebenso finden Sie eine kleine Auswahl an BIO-Lebensmitteln, 1 Flasche Wasser (St. Leonhard, still), Kaffee, Wein, Tees, Brat- und Speiseöle, Balsamico Essig, Zucker, Salz/Pfeffer, Geschirrspültabs, Toilettenpapier bei Anreise im Haus vor.</p><p>Ein Parkplatz ist auf unserem Grundstück vorhanden. Weitere Parkflächen in unserer Sackgasse können auch für das Abstellen von kleinen Booten genutzt werden.</p><p>Wir erheben eine Kaution in Höhe von 300 Euro, die nach Urlaubsende und Abnahme des Ferienhauses zurückerstattet wird.</p><p>Unser Grundstück ist durch eine Kamera überwacht, die nur aktiv ist, wenn sich das Haus nicht in der Vermietung befindet. Ein Hinweisschild auf Kameraüberwachung auf dem Grundstück ist am Haus angebracht.</p></div></details>
-      <details><summary class="k">AGB</summary><div class="in"><p><a href="https://www.hauszweineun.de/agb/" target="_blank" rel="noopener">AGB herunterladen</a></p></div></details>
-    </div>
+    <p class="also"><button type="button" class="tl" data-open="preise">Mietpreise und weitere Informationen</button></p>
   </div>
 </section>
 </main>
 
-<section class="band bye w">
-  <p class="h"><a href="mailto:hello@hauszweineun.de">hello@hauszweineun.de</a></p>
-  <p class="sub"><a href="tel:+491605551027">0049 160 555 10 27</a></p>
-</section>
-<footer class="deep end" id="impressum">
+<footer class="end" id="impressum">
   <div class="row">
-    <a class="logo" href="#start" aria-label="Haus Zweineun"><svg viewBox="0 0 1296 769"><use href="#logo"/></svg></a>
+    <div class="c"><a class="mail" href="mailto:hello@hauszweineun.de">hello@hauszweineun.de</a><p style="margin-top:14px"><a href="tel:+491605551027">0049 160 555 10 27</a><br><a href="https://www.instagram.com/haus_zweineun/" target="_blank" rel="noopener">Instagram</a></p></div>
     <div class="c"><p>Gesetzliche Anbieterkennung:<br>Inken Schwedt, Thomas Notholt<br>Övern Block 31<br>22337 Hamburg</p><p>Standort des Hauses: Fladenweg 29, 24864 Brodersby</p></div>
     <div class="c"><p>Youtube‐Video: YORBITER aerial foodtage, Elisabeth‐Selbert‐Str. 10, 24568 Kaltenkirchen</p><p>Fotos: Liv Schwedt, Thomas Notholt, gudrun gewecke fotografie</p><p>Texte: www.protourist‐agentur.de</p></div>
-    <div class="c"><p><a href="https://www.instagram.com/haus_zweineun/" target="_blank" rel="noopener">Instagram</a><br><a href="https://www.hauszweineun.de/datenschutzerklaerung/">Datenschutzerklärung</a><br><a href="https://www.hauszweineun.de/agb/">AGB</a></p></div>
-    <div class="n" aria-hidden="true"><svg viewBox="0 0 100 150"><use href="#d2"/></svg><svg viewBox="0 0 100 150"><use href="#d9"/></svg></div>
+    <div class="c" style="grid-column:span 1"><p><a href="https://www.hauszweineun.de/datenschutzerklaerung/">Datenschutz</a><br><a href="https://www.hauszweineun.de/agb/">AGB</a></p></div>
   </div>
+  <div class="name" aria-hidden="true">Zweineun</div>
 </footer>
 
 <a href="#buchung" class="fab" id="fab">Buchen <i>ab 140 Euro pro Nacht</i></a>
+<div class="dock" id="dock"><a href="kompass.html">Kompass</a><button type="button" data-open="blick">Infos</button><a href="#buchung">Buchen</a></div>
+
+<div class="shade" id="shade"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Alles Wichtige" aria-hidden="true">
+  <div class="dh"><span class="k">Alles Wichtige</span><button type="button" id="dx" aria-label="Schließen"></button></div>
+  <div class="tabs" role="tablist">
+    <button type="button" class="k" role="tab" data-pane="blick" aria-selected="true">Auf einen Blick</button>
+    <button type="button" class="k" role="tab" data-pane="preise" aria-selected="false">Preise</button>
+    <button type="button" class="k" role="tab" data-pane="radio" aria-selected="false">29 Radio</button>
+  </div>
+  <div class="db" id="db">
+    <div class="pane on" id="pane-blick"><dl>
+    <div class="it"><dt>Haus</dt><dd>Blockhaus von Honka aus den 1970er Jahren, Renovierung 2019. 57 qm, offen gestalteter Wohn- und Küchenbereich, offene Galerie unterm Dach.</dd></div>
+    <div class="it"><dt>Gäste</dt><dd>Bestens für zwei Personen ausgelegt, max. vier Personen. Kinder ab 8 Jahren. Die Galerie kann auf Anfrage gegen Aufpreis als weiterer Schlafraum genutzt werden.</dd></div>
+    <div class="it"><dt>Lage</dt><dd>Direkt an der Schlei, am Ende einer ruhigen Sackgasse. Fußläufig ist der Strand „Klein Westerland“ erreichbar. Ein Parkplatz ist auf dem Grundstück vorhanden.</dd></div>
+    <div class="it"><dt>Schlafen</dt><dd>1,60 m breites Bett von Woodboom, Bio-Bettwäsche und Bio-Handtücher. Verspiegeltes Schlafzimmerfenster mit Blick auf die Schlei.</dd></div>
+    <div class="it"><dt>Wohnen</dt><dd>Kaminofen von Morsoe, zwei Körbe Feuerholz kostenlos. Sessel von Hans Wegner, Leseleuchte von Arne Jacobsen, Schaukelstuhl von Illum Wikkelsø. Bluetooth-Lautsprecher, Bücher über Architektur und die Umgebung.</dd></div>
+    <div class="it"><dt>Küche</dt><dd>Alle Kochutensilien für ein Menü vorhanden, Moccamaster. Bei Anreise eine kleine Auswahl an BIO-Lebensmitteln, Wasser, Kaffee, Wein und Tees im Haus.</dd></div>
+    <div class="it"><dt>Draußen</dt><dd>Überdachte Terrasse mit verglasten Seiten, offene Sonnenterrasse mit Lounge-Liegen von Skagerak, Feuerschale, Naturgarten.</dd></div>
+    <div class="it"><dt>W-LAN</dt><dd>Kostenfrei und schnell, in allen Räumen und auf der Terrasse.</dd></div>
+    <div class="it"><dt>Preis</dt><dd>Ab 140 Euro pro Nacht für 2 Personen, inklusive Endreinigung, BIO-Wäschepaket, Servicegebühr, Wasser, Strom und Heizung. Mindestmietdauer 3 Nächte, in der Hauptsaison 7 Nächte.</dd></div>
+    <div class="it"><dt>Gut zu wissen</dt><dd>Im Haus wird nicht geraucht. Haustiere müssen zu Hause bleiben. Kaution 300 Euro. Persönlicher Empfang bei Anreise.</dd></div>
+  </dl></div>
+    <div class="pane" id="pane-preise">
+      <div class="season"><span><span class="hd">Nebensaison</span><i>Januar – Februar / November – Mitte Dezember</i></span><b>140 Euro</b></div>
+      <div class="season"><span><span class="hd">Zwischensaison</span><i>März – Ende Mai / ab Mitte September – Ende Oktober</i></span><b>160 Euro</b></div>
+      <div class="season"><span><span class="hd">Hauptsaison</span><i>Weihnachten / Ostern, Juni – bis Mitte September</i></span><b>180 Euro</b></div>
+      <details><summary>Mietpreise</summary><div class="in"><p>Die Preise verstehen sich inklusive persönlichem Empfang bei Anreise oder Verabschiedung (bis auf sonntags) durch einen Ansprechpartner für alle Fragen vor Ort, Endreinigung (100 Euro) und BIO-Wäschepaket (Bettwäsche/Handtücher/Geschirrtücher, Wischlappen) für 2 Personen (50 Euro), Servicegebühr (Euro 40,00), sowie der Kosten für Wasser, Strom und Heizung einschließlich Umsatzsteuer.</p><p>Bei mehr als zwei Gästen erheben wir einen Aufschlag von 30 Euro pro Person und Nacht (Erwachsene ab 17 Jahre), 20 Euro pro Person und Nacht (Kinder von 8 – 16 Jahre) zuzüglich einmalig für BIO-Bettwäsche und BIO-Handtücher 25 Euro pro Person.</p><p>Mindestmietdauer: 3 Nächte in der Zwischen- und Nebensaison, 7 Nächte in der Hauptsaison. Bei Buchungslücken sind auch kürzere Buchungszeiträume nach Absprache möglich. Weihnachten und Ostern gelten als Hauptsaison.</p></div></details>
+      <details><summary>Weitere Informationen</summary><div class="in"><p>Für die Befeuerung des Kamins und der Feuerschale stehen Ihnen zwei Körbe Feuerholz für den Kamin oder die Feuerschale kostenfrei zur Verfügung. Ebenso finden Sie eine kleine Auswahl an BIO-Lebensmitteln, 1 Flasche Wasser (St. Leonhard, still), Kaffee, Wein, Tees, Brat- und Speiseöle, Balsamico Essig, Zucker, Salz/Pfeffer, Geschirrspültabs, Toilettenpapier bei Anreise im Haus vor.</p><p>Ein Parkplatz ist auf unserem Grundstück vorhanden. Weitere Parkflächen in unserer Sackgasse können auch für das Abstellen von kleinen Booten genutzt werden.</p><p>Wir erheben eine Kaution in Höhe von 300 Euro, die nach Urlaubsende und Abnahme des Ferienhauses zurückerstattet wird.</p><p>Unser Grundstück ist durch eine Kamera überwacht, die nur aktiv ist, wenn sich das Haus nicht in der Vermietung befindet. Ein Hinweisschild auf Kameraüberwachung auf dem Grundstück ist am Haus angebracht.</p></div></details>
+      <details><summary>AGB</summary><div class="in"><p><a href="https://www.hauszweineun.de/agb/" target="_blank" rel="noopener">AGB herunterladen</a></p></div></details>
+    </div>
+    <div class="pane" id="pane-radio">
+      <p class="sub" style="margin:18px 0 6px">Aktuelles von der Schlei</p>
+      <div id="posts"></div>
+      <p class="more"><a class="lnk" href="https://www.instagram.com/haus_zweineun/" target="_blank" rel="noopener">@haus_zweineun auf Instagram</a></p>
+    </div>
+  </div>
+</aside>
 
 <script>
 /* =========================================================
-   BILDER: [Dateiname, Breite, Höhe]. Hier tauschen.
-   Jedes Bild wird der Reihe nach in diesen Ordnern gesucht
-   (relativ zur index.html). Für GitHub reicht img/.
+   BILDER: [Dateiname, Breite, Höhe]. Jedes Bild wird der
+   Reihe nach in diesen Ordnern gesucht. Für online reicht img/.
    ========================================================= */
 const DIRS=['img/','genutzt/','Bilder_Videos/Shooting1/','Bilder_Videos/Shooting2/','../img/','../genutzt/','../Bilder_Videos/Shooting1/','../Bilder_Videos/Shooting2/'];
 const z=n=>'Leo_Jaerisch_ZOLEO-'+n+'.jpg';
-const HERO=[z('01'),2400,1602];          /* Querformat, Desktop */
-const HERO_M=[z('04'),1600,2400];        /* Hochformat, Handy  */
+const HERO=[z('01'),2400,1602];      /* Querformat, Desktop */
+const HERO_M=[z('04'),1600,2400];    /* Hochformat, Handy  */
+/* Vollbild-Kapitel (werden auf den Bildschirm zugeschnitten) */
+const BLEED={innen:['hz_kunst.jpg',1718,1252],aussen:[z('33'),2400,1600],umgebung:[z('12'),2400,1602]};
+/* alle anderen Bilder im Originalformat */
 const IMG={
-  p1:['DSCF5333.jpg',1638,2048], p2:['hz_sofa.jpg',964,1608],
-  big:[z('33'),2400,1600],
-  kunst:['hz_kunst.jpg',1718,1252],
-  innen:['DSCF5461.jpg',1638,2048], aussen:['hz_liege.jpg',1412,1784],
-  t1:['DSCF5265.jpg',1638,2048], t2:[z('06'),1602,2400], t3:['DSCF5443.jpg',1638,2048],
-  fruehjahr:['hz_schlei-fruehjahr.jpg',1394,1768], sommer:['hz_strand.jpg',1846,1842], herbst:['hz_feld-herbst.jpg',1708,1216], winter:['hz_haus-winter.jpg',1410,1750],
-  eveA:['hz_tuer-abend.jpg',1460,1772], eveB:['hz_terrasse-nacht.jpg',1018,1582]
+  f1:['DSCF5333.jpg',1638,2048], f2:[z('16'),2400,1602], f3:['hz_tuer-abend.jpg',1460,1772], f4:['hz_strand.jpg',1846,1842],
+  i1:['DSCF5461.jpg',1638,2048], i2:['hz_sofa.jpg',964,1608], i3:['DSCF5265.jpg',1638,2048],
+  a1:['hz_liege.jpg',1412,1784], a2:[z('06'),1602,2400], a3:['hz_terrasse-nacht.jpg',1018,1582],
+  u1:['hz_bootsweg.jpg',1008,1476], u2:['hz_fischerboote.jpg',974,1222], u3:['hz_schlei-weite.jpg',1022,1528],
+  fruehjahr:['hz_schlei-fruehjahr.jpg',1394,1768], sommer:['hz_strand.jpg',1846,1842], herbst:['hz_feld-herbst.jpg',1708,1216], winter:['hz_haus-winter.jpg',1410,1750]
 };
-const UMGEBUNG=[['hz_bootsweg.jpg',1008,1476],['hz_fischerboote.jpg',974,1222],['hz_segler.jpg',988,1118],[z('20'),2400,1600],['hz_karlchen.jpg',972,1294],['hz_boot-blau.jpg',1010,1420],['hz_gasse.jpg',1778,1368],['hz_schlei-weite.jpg',1022,1528],['hz_schlei-winter.jpg',1780,1302]];
 
-const HOME=[9.70391,54.52048];
-const SETS={
-  schlei:[['Aal-Räucherei','https://www.foeh.de/',9.93389,54.66248],['Café Lindauhof','http://www.lindauhof.de/',9.80211,54.58721],['Bonbon Kocherei','https://www.bonbonkocherei.de/',9.83684,54.47390],['Fischdeel Land&Meer','https://www.fischdeel.de/',9.83900,54.46990],['Wikinger Museum Haithabu','https://haithabu.de/de/startseite',9.56940,54.49708],['Kaphörnchen','https://www.facebook.com/pages/category/Ice-Cream-Shop/KapH%C3%B6rnchen-896832576999800/',9.56966,54.51151],['Die Burgermeisterin','https://www.facebook.com/siepelundsindram/',9.57155,54.51144],['Naschikönig','https://www.facebook.com/pages/Naschik%C3%B6nig/112042055596523',9.83200,54.47250],['Sieseby','https://www.meerart.de/sieseby-ein-weisses-juwel-der-schlei/',9.86126,54.59402],['Schlei-Perle','https://www.schleiperle-arnis.de/',9.93265,54.62882],['Giftbude','https://www.ndr.de/nachrichten/schleswig-holstein/Die-Giftbude-ein-besonderes-Inklusionsprojekt,lotseninsel156.html',10.0326,54.67398]],
-  brodersby:[['Leah´s Snoopkram','https://www.leahs-snoopkram.de/',9.70800,54.53900],['Markt Treff',null,9.70683,54.53795],['Bio Hof Buschke','https://www.hof-bluschke.de/',9.70495,54.53591],['Kuchenhaus','https://www.das-kuchenhaus.de/',9.71150,54.53112],['Fährhaus','https://www.faehrhaus-missunde.de/',9.71527,54.52462]]
-};
-const TOWNS={schlei:[['Schleswig',9.5653,54.5185],['Kappeln',9.9311,54.6614],['Eckernförde',9.8375,54.4716]],brodersby:[['Missunde',9.7203,54.5215]]};
-const FINE=[[[9.6601,54.5078],[9.6625,54.5074],[9.6656,54.5065],[9.6672,54.505],[9.6683,54.5036],[9.669,54.5009],[9.6697,54.4996],[9.6708,54.4985],[9.6725,54.4972],[9.6732,54.4968],[9.674,54.4962],[9.676,54.4954],[9.6788,54.4952],[9.6836,54.4957]],[[9.7122,54.4954],[9.7128,54.4991],[9.7125,54.4998],[9.7112,54.5021],[9.7102,54.5039],[9.7085,54.5089],[9.7077,54.5096],[9.7066,54.5104],[9.7056,54.5113],[9.7022,54.5133],[9.6987,54.5153],[9.698,54.5169],[9.6972,54.5174],[9.6973,54.5186],[9.6982,54.5184],[9.6976,54.5176],[9.699,54.5168],[9.7027,54.5163],[9.704,54.5165],[9.7066,54.5171],[9.7086,54.5171],[9.71,54.517],[9.7133,54.5166],[9.7154,54.5171],[9.7164,54.5183],[9.7162,54.52],[9.7158,54.5212],[9.716,54.5225],[9.7172,54.5241],[9.7183,54.5251],[9.7188,54.5265],[9.719,54.5276],[9.7196,54.5287],[9.7249,54.5292],[9.727,54.5286],[9.7256,54.5275],[9.7245,54.5259],[9.7244,54.5252],[9.7246,54.5244],[9.7251,54.5231],[9.7238,54.5226],[9.7226,54.5211],[9.725,54.5209],[9.7255,54.5201],[9.7275,54.5204],[9.7259,54.5211],[9.727,54.5214],[9.7272,54.5218],[9.727,54.5224],[9.7277,54.5233],[9.7312,54.5233],[9.7331,54.5245],[9.7368,54.525],[9.7377,54.5244],[9.7392,54.5239],[9.7392,54.523],[9.7399,54.5242],[9.7377,54.5246],[9.7376,54.5252],[9.7362,54.5264],[9.7346,54.5276],[9.7364,54.5289],[9.7372,54.5288],[9.737,54.528],[9.7376,54.5272],[9.7415,54.529],[9.7429,54.5311],[9.7415,54.5331],[9.74,54.5347],[9.7393,54.5356],[9.7404,54.5366],[9.7424,54.5361],[9.7445,54.5363],[9.7446,54.5374],[9.7443,54.5388],[9.7453,54.5403],[9.7452,54.5412],[9.7463,54.5422],[9.7456,54.5435],[9.749,54.5451],[9.7489,54.5463],[9.7496,54.547],[9.7523,54.5472],[9.7535,54.5479],[9.756,54.5475],[9.7587,54.5482],[9.7622,54.55],[9.7627,54.5507],[9.7634,54.5533],[9.7658,54.5559],[9.7698,54.5573]],[[9.7573,54.5595],[9.7565,54.5587],[9.7531,54.5574],[9.7523,54.5551],[9.7518,54.5537],[9.7495,54.5518],[9.749,54.5509],[9.7497,54.551],[9.7455,54.5484],[9.7394,54.5438],[9.7384,54.5427],[9.7377,54.5418],[9.7382,54.5416],[9.7379,54.5393],[9.7388,54.5387],[9.7358,54.5367],[9.7358,54.536],[9.736,54.5352],[9.7355,54.5341],[9.735,54.5325],[9.7326,54.5322],[9.7246,54.5309],[9.7226,54.5322],[9.7209,54.534],[9.7172,54.5341],[9.7149,54.5332],[9.7143,54.5333],[9.7137,54.5329],[9.714,54.5323],[9.7163,54.5315],[9.7191,54.5309],[9.7197,54.5305],[9.7199,54.5303],[9.7167,54.5285],[9.7164,54.5254],[9.7151,54.524],[9.7147,54.5233],[9.7145,54.5231],[9.7137,54.5221],[9.7135,54.5212],[9.7131,54.5204],[9.708,54.5198],[9.7027,54.5194],[9.7021,54.5206],[9.7021,54.5227],[9.6995,54.5264],[9.696,54.5275],[9.6936,54.5269],[9.6925,54.5268],[9.6898,54.5261],[9.687,54.5263],[9.6792,54.5259],[9.674,54.5251],[9.6671,54.5246],[9.6646,54.5241],[9.6618,54.5234]]];
-/* Uferlinie der Schlei (OpenStreetMap, vereinfacht) */
-const SCHLEI=[[9.544,54.5097],[9.5488,54.5081],[9.5475,54.5064],[9.5525,54.5034],[9.5723,54.5023],[9.574,54.5006],[9.6247,54.5118],[9.6312,54.5116],[9.6392,54.5078],[9.6381,54.5095],[9.6426,54.5108],[9.6644,54.507],[9.6731,54.4967],[9.6836,54.4957],[9.6915,54.4925],[9.6908,54.4904],[9.7077,54.4913],[9.7122,54.4954],[9.7125,54.5003],[9.7085,54.5089],[9.6993,54.5147],[9.6968,54.5176],[9.6973,54.5186],[9.7023,54.5163],[9.7154,54.5171],[9.7155,54.522],[9.7214,54.5292],[9.7273,54.5283],[9.7246,54.527],[9.7231,54.5209],[9.7262,54.52],[9.7271,54.5231],[9.7361,54.5251],[9.7392,54.523],[9.7346,54.5276],[9.7427,54.5302],[9.7395,54.5361],[9.7445,54.5363],[9.7456,54.5435],[9.7489,54.5466],[9.7612,54.5491],[9.7658,54.5559],[9.7751,54.5584],[9.7791,54.5571],[9.7744,54.5526],[9.7775,54.5532],[9.8028,54.5669],[9.8195,54.5791],[9.8206,54.5829],[9.8255,54.5813],[9.8388,54.5842],[9.8419,54.5914],[9.8446,54.5885],[9.8487,54.5898],[9.8486,54.5921],[9.8778,54.5986],[9.9056,54.6145],[9.9191,54.6165],[9.9326,54.6238],[9.938,54.6233],[9.9388,54.6263],[9.9362,54.629],[9.9454,54.6369],[9.9443,54.6408],[9.9378,54.6454],[9.9366,54.6506],[9.9416,54.6548],[9.9375,54.66],[9.9489,54.6744],[9.9564,54.6758],[9.976,54.674],[9.9898,54.6698],[9.9885,54.6639],[9.9904,54.6667],[9.9974,54.6652],[9.9984,54.6716],[10.0021,54.6743],[10.0093,54.6617],[10.0131,54.6615],[10.0163,54.6641],[10.031,54.6647],[10.033,54.6688],[10.0282,54.6725],[10.0325,54.6699],[10.0362,54.6714],[10.032,54.6737],[10.03,54.6779],[10.0315,54.6792],[10.0274,54.6785],[10.0328,54.6806],[10.0293,54.6806],[10.0301,54.6829],[10.0354,54.6835],[10.0324,54.6847],[10.0245,54.6816],[10.0321,54.6865],[10.0218,54.6843],[10.0271,54.6862],[10.0285,54.6891],[10.0272,54.6909],[10.0248,54.6869],[10.0201,54.6885],[10.0242,54.6887],[10.0206,54.6896],[10.024,54.6917],[10.0172,54.6926],[10.0175,54.6941],[10.0123,54.6923],[10.0137,54.6912],[10.0113,54.6895],[9.9999,54.6876],[9.9956,54.682],[9.9679,54.6833],[9.9626,54.6788],[9.946,54.6773],[9.9419,54.6733],[9.9374,54.6729],[9.9394,54.6711],[9.9344,54.6602],[9.9362,54.6549],[9.9326,54.6509],[9.932,54.6425],[9.9299,54.6407],[9.9306,54.6317],[9.9343,54.6344],[9.9368,54.633],[9.9335,54.6293],[9.9285,54.6271],[9.9115,54.6298],[9.8906,54.6227],[9.8799,54.6155],[9.8766,54.6096],[9.8606,54.6044],[9.8593,54.6021],[9.8342,54.5979],[9.8341,54.5947],[9.8389,54.5944],[9.8255,54.5917],[9.8189,54.5856],[9.8202,54.584],[9.8163,54.5854],[9.8121,54.5798],[9.7984,54.5778],[9.7921,54.5735],[9.7726,54.5754],[9.7811,54.5794],[9.7732,54.5784],[9.7711,54.5809],[9.7677,54.5794],[9.7632,54.5674],[9.7688,54.5678],[9.7687,54.5649],[9.7539,54.5582],[9.7496,54.5509],[9.7401,54.5449],[9.7352,54.5322],[9.7246,54.5309],[9.7198,54.5343],[9.7135,54.5329],[9.7202,54.5306],[9.7123,54.52],[9.7027,54.5194],[9.7017,54.5241],[9.6976,54.5274],[9.6585,54.5226],[9.645,54.5237],[9.6499,54.5205],[9.6387,54.5213],[9.6341,54.5131],[9.6256,54.5218],[9.6331,54.5257],[9.6273,54.5312],[9.6034,54.5261],[9.6054,54.5212],[9.5901,54.5145],[9.5869,54.5124],[9.5874,54.5102],[9.573,54.5125],[9.557,54.5109],[9.5578,54.5126],[9.555,54.513],[9.544,54.5097]];
+/* GÄSTESTIMMEN: ein oder zwei echte Sätze von Gästen, mit deren Einverständnis.
+   text: der Satz, 1:1. von: Vorname oder "Gäste aus Hamburg". wann: Monat und Jahr.
+   AKTUELL STEHEN HIER PLATZHALTER. Vor dem Livegang durch echte Stimmen ersetzen oder die Liste leeren. */
+const STIMMEN=[
+  {text:'Platzhalter. Hier steht ein Satz aus dem Gästebuch von Haus Zweineun.',von:'Name der Gäste',wann:'Monat Jahr'},
+  {text:'Platzhalter. Hier steht ein zweiter Satz aus dem Gästebuch.',von:'Name der Gäste',wann:'Monat Jahr'}
+];
+
+/* 29 RADIO: die letzten Beiträge von instagram.com/haus_zweineun. Texte 1:1 von dort.
+   Die Fotos sind Platzhalter aus unseren Shootings, bis der Feed angebunden ist. */
+const RADIO=[
+  {bild:['DSCF5424.jpg',1638,2048],datum:'24. Oktober 2026',url:'https://www.instagram.com/haus_zweineun/p/De3njzZiImM/',
+   text:['Draußen wird es kühler. Drinnen knistert schon der Kamin.','Ein Spaziergang an der Schlei, den Lieblingspullover anziehen und abends ins Feuer schauen. Im Herbst braucht es manchmal gar nicht viel.']},
+  {bild:[z('29'),2400,1602],datum:'2. August 2026',url:'https://www.instagram.com/haus_zweineun/p/Dbi7gH_DIDr/',
+   text:['Gartenliebe. 🌸 Die Liebe zu Blumen spiegelt sich auch im Garten von Haus Zweineun wider.']},
+  {bild:[z('12'),2400,1602],datum:'28. Juni 2026',url:'https://www.instagram.com/haus_zweineun/p/DaIOfvTjDIm/',
+   text:['Der Sommer ist in Brodersby angekommen.']}
+];
+
 
 const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $=id=>document.getElementById(id);
+const el=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e};
+function closeMenu(){if($('menu').classList.contains('on'))$('mb').click()}
 
 /* ---------- Bilder ---------- */
 const load=(i,name)=>{let k=0;i.onerror=()=>{if(++k<DIRS.length)i.src=DIRS[k]+name;else i.onerror=null};i.src=DIRS[0]+name};
-const mk=([s,w,h],alt='Haus Zweineun',lazy=true)=>{const i=new Image();i.width=w;i.height=h;i.alt=alt;if(lazy)i.loading='lazy';i.decoding='async';load(i,s);return i};
-document.querySelectorAll('[data-img]').forEach(el=>{const d=IMG[el.dataset.img];if(d)el.prepend(mk(d))});
+const mk=([s,w,h],alt='Haus Zweineun')=>{const i=new Image();i.width=w;i.height=h;i.alt=alt;i.loading='lazy';i.decoding='async';load(i,s);return i};
+document.querySelectorAll('[data-img]').forEach(e=>{const d=IMG[e.dataset.img];if(d)e.prepend(mk(d))});
+document.querySelectorAll('[data-bleed]').forEach(i=>{i.loading='lazy';i.decoding='async';load(i,BLEED[i.dataset.bleed][0])});
 {const mq=matchMedia('(max-width:720px)'),hi=$('himg');let cur;
- const set=()=>{const d=mq.matches?HERO_M:HERO;if(d===cur)return;cur=d;hi.width=d[1];hi.height=d[2];load(hi,d[0])};
- set();mq.addEventListener('change',set);}
-const strip=$('strip');
-UMGEBUNG.forEach(d=>{const f=document.createElement('figure'),i=mk(d,'Umgebung');i.style.aspectRatio=d[1]+'/'+d[2];f.append(i);strip.append(f)});
-$('stc').textContent=UMGEBUNG.length+' Bilder';
-const step=()=>Math.max(260,strip.clientWidth*.7);
-$('sn').onclick=()=>strip.scrollBy({left:step(),behavior:rm?'auto':'smooth'});
-$('sp').onclick=()=>strip.scrollBy({left:-step(),behavior:rm?'auto':'smooth'});
+ const set=()=>{const d=mq.matches?HERO_M:HERO;if(d===cur)return;cur=d;load(hi,d[0])};set();mq.addEventListener('change',set);}
+
+/* ---------- Manifest in Wörter zerlegen ---------- */
+const words=[];
+{const p=$('mani');const wrap=(node,into)=>{[...node.childNodes].forEach(n=>{if(n.nodeType===3){n.textContent.split(/(\s+)/).forEach(t=>{if(!t)return;if(/^\s+$/.test(t)){into.append(' ');return}const s=el('span',null,t);words.push(s);into.append(s)})}else{const c=n.cloneNode(false);into.append(c);wrap(n,c)}})};
+ const f=document.createDocumentFragment();wrap(p,f);p.textContent='';p.append(f);if(rm)words.forEach(w=>w.classList.add('on'));}
+
+/* ---------- Schublade ---------- */
+const drawer=$('drawer'),shade=$('shade');let lastFocus=null;
+function pane(id){drawer.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.pane===id));drawer.querySelectorAll('.pane').forEach(p=>p.classList.toggle('on',p.id==='pane-'+id));$('db').scrollTop=0}
+function openDrawer(id){closeMenu();lastFocus=document.activeElement;pane(id||'blick');drawer.classList.add('on');shade.classList.add('on');drawer.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setTimeout(()=>$('dx').focus(),60)}
+function closeDrawer(){if(!drawer.classList.contains('on'))return;drawer.classList.remove('on');shade.classList.remove('on');drawer.setAttribute('aria-hidden','true');document.body.style.overflow='';if(lastFocus&&lastFocus.focus)lastFocus.focus()}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-open]');if(b){e.preventDefault();openDrawer(b.dataset.open)}});
+drawer.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>pane(b.dataset.pane));
+$('dx').onclick=closeDrawer;shade.onclick=closeDrawer;
+RADIO.forEach(r=>{const a=el('a','post');a.href=r.url;a.target='_blank';a.rel='noopener';a.append(el('span','hd',r.datum),el('p',null,r.text[0]));$('posts').append(a)});
+
+/* ---------- Gästestimmen ---------- */
+{const sec=$('stimmen'),row=sec.querySelector('.row');
+ STIMMEN.slice(0,2).forEach(s=>{const f=el('figure'),q=el('blockquote',null,'„'+s.text+'“'),c=el('figcaption','k',[s.von,s.wann].filter(Boolean).join(' · '));f.append(q,c);row.append(f)});
+ if(STIMMEN.length)sec.hidden=false;}
+
+
 
 /* ---------- Einblenden ---------- */
 {const els=[...document.querySelectorAll('[data-r]')];
@@ -506,52 +715,30 @@ $('sp').onclick=()=>strip.scrollBy({left:-step(),behavior:rm?'auto':'smooth'});
 
 /* ---------- Menü ---------- */
 {const mb=$('mb'),mn=$('menu'),tp=$('top');
- const set=o=>{mn.classList.toggle('on',o);tp.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''};
+ const set=o=>{mn.classList.toggle('on',o);tp.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);if(!$('drawer').classList.contains('on'))document.body.style.overflow=o?'hidden':''};
  mb.onclick=()=>set(!mn.classList.contains('on'));
- mn.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>set(false)));
- addEventListener('keydown',e=>{if(e.key==='Escape')set(false)});}
+ mn.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>set(false)));
+ addEventListener('keydown',e=>{if(e.key==='Escape'){closeDrawer();set(false)}});}
 
-/* ---------- Scroll: Kopf, 29, Buchen-Knopf ---------- */
-{const tp=$('top'),hero=$('start'),n2=$('n2'),n9=$('n9'),cue=$('cue'),fab=$('fab'),bk=$('buchung'),ft=$('impressum');let tick=false;
+/* ---------- Scroll ---------- */
+{const tp=$('top'),hero=$('start'),hs=[...hero.querySelectorAll('h1 span')],mani=$('haus'),fls=[...document.querySelectorAll('.mani .fl')],chaps=[...document.querySelectorAll('.chap')],fab=$('fab'),dock=$('dock'),bk=$('buchung'),ft=$('impressum');let tick=false,done=0;
+ const mqM=matchMedia('(max-width:820px)');
  const run=()=>{tick=false;const y=scrollY,h=innerHeight,hb=hero.offsetHeight;
-  tp.classList.toggle('solid',y>hb-70);cue.classList.toggle('hide',y>40);
-  if(!rm&&y<hb){n2.style.transform='translate3d(0,'+(y*.16)+'px,0)';n9.style.transform='translate3d(0,'+(y*.3)+'px,0)'}
+  let over=y<hb-70;chaps.forEach(c=>{const r=c.getBoundingClientRect();if(r.top<60&&r.bottom>60)over=true;
+    if(!rm&&r.bottom>0&&r.top<h){const im=c.firstElementChild;im.style.transform='translate3d(0,'+((r.top/h)*-5).toFixed(2)+'%,0)'}});
+  tp.classList.toggle('solid',!over);
+  if(!rm&&y<hb)hs.forEach((s,i)=>s.style.translate='0 '+(y*(.06+i*.05)).toFixed(1)+'px');
+  /* Wörter einfärben */
+  const mr=mani.getBoundingClientRect();let p;
+  if(mqM.matches)p=(h*.85-mr.top)/(h*.7);else p=(-mr.top+h*.25)/(mani.offsetHeight-h*1.05);
+  const n=Math.max(done,Math.round(Math.min(1,Math.max(0,p))*words.length));
+  if(n!==done){for(let i=done;i<n;i++)words[i].classList.add('on');done=n}
+  if(!rm&&!mqM.matches)fls.forEach(f=>{f.style.transform='translate3d(0,'+((mr.top)*parseFloat(f.dataset.sp)).toFixed(1)+'px,0)'});
   const b=bk.getBoundingClientRect(),f=ft.getBoundingClientRect();
-  fab.classList.toggle('on',y>hb*.8&&!(b.top<h*.9&&b.bottom>0)&&f.top>h+40)};
+  const show=y>hb*.8&&!(b.top<h*.9&&b.bottom>0)&&f.top>h+40;fab.classList.toggle('on',show);dock.classList.toggle('on',show);
+  const inB=b.top<h*.5&&b.bottom>h*.2;document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('cur',!over&&(a.dataset.nav==='buchung')===inB))};
  const on=()=>{if(!tick){tick=true;requestAnimationFrame(run)}};
  addEventListener('scroll',on,{passive:true});addEventListener('resize',on);addEventListener('load',on);run();}
-
-/* ---------- Karte ---------- */
-const NS='http://www.w3.org/2000/svg',K=Math.cos(54.55*Math.PI/180);
-const P=([lo,la])=>[(lo-9.5)*K*1000,(54.75-la)*1000];
-document.getElementById('water').setAttribute('d','M'+SCHLEI.map(p=>P(p).map(n=>n.toFixed(2)).join(',')).join('L')+'Z');
-document.getElementById('fine').setAttribute('d',FINE.map(s=>'M'+s.map(p=>P(p).map(n=>n.toFixed(2)).join(',')).join('L')).join(''));
-const svg=document.getElementById('map'),gp=document.getElementById('pts'),list=document.getElementById('plist'),home=document.getElementById('home');
-let vb=[0,0,100,80],anim;
-function setVB(t){cancelAnimationFrame(anim);const f=vb.slice(),t0=performance.now(),d=rm?1:900;
-  const tick=n=>{const k=Math.min(1,Math.max(0,(n-t0)/d)),e=1-Math.pow(1-k,3);vb=f.map((x,i)=>x+(t[i]-x)*e);svg.setAttribute('viewBox',vb.join(' '));scale();if(k<1)anim=requestAnimationFrame(tick)};anim=requestAnimationFrame(tick)}
-function scale(){const s=vb[2]/svg.clientWidth;gp.querySelectorAll('.pt').forEach(g=>{g.querySelector('circle').setAttribute('r',(g.classList.contains('on')?6:3.6)*s);const t=g.querySelector('text');t.setAttribute('font-size',11*s);t.setAttribute('stroke-width',5*s);t.setAttribute('x',+g.dataset.x+9*s);t.setAttribute('y',+g.dataset.y+4*s)});
-  const tw=document.getElementById('towns');tw.querySelectorAll('text').forEach(x=>{x.setAttribute('font-size',12*s);x.setAttribute('stroke-width',4*s);x.setAttribute('x',+x.dataset.x+8*s);x.setAttribute('y',+x.dataset.y+4*s)});
-  const hw=30*s,hh=17.8*s,[hx,hy]=P(HOME);const u=home.querySelector('use');u.setAttribute('width',hw);u.setAttribute('height',hh);u.setAttribute('x',hx-hw/2);u.setAttribute('y',hy-hh/2);const hc=document.getElementById('homec');hc.setAttribute('cx',hx);hc.setAttribute('cy',hy);hc.setAttribute('r',hw*.8)}
-function hi(k){gp.querySelectorAll('.pt').forEach((g,i)=>g.classList.toggle('on',i===k));list.querySelectorAll('li').forEach((l,i)=>l.classList.toggle('on',i===k));scale()}
-function show(key){
-  gp.innerHTML='';list.innerHTML='';const pts=SETS[key];document.getElementById('fine').style.display=key==='brodersby'?'':'none';document.getElementById('water').style.display=key==='brodersby'?'none':'';const tw=document.getElementById('towns');tw.innerHTML='';TOWNS[key].forEach(([n,lo,la])=>{const [x,y]=P([lo,la]);const tx=document.createElementNS(NS,'text');tx.setAttribute('class','town');tx.dataset.x=x;tx.dataset.y=y;tx.textContent=n;tw.append(tx)});
-  pts.forEach(([name,url,lo,la],i)=>{const [x,y]=P([lo,la]);
-    const g=document.createElementNS(NS,'g');g.setAttribute('class','pt');g.dataset.x=x;g.dataset.y=y;
-    const c=document.createElementNS(NS,'circle');c.setAttribute('cx',x);c.setAttribute('cy',y);
-    const t=document.createElementNS(NS,'text');t.textContent=name;g.append(c,t);gp.append(g);
-    g.onmouseenter=()=>hi(i);g.onmouseleave=()=>hi(-1);g.onclick=()=>{if(url)open(url,'_blank','noopener')};
-    const li=document.createElement('li');li.innerHTML=(url?'<a href="'+url+'" target="_blank" rel="noopener">':'<a>')+'<span>'+name+'</span><span class="o">'+(url?'Website':'')+'</span></a>';
-    li.onmouseenter=()=>hi(i);li.onmouseleave=()=>hi(-1);li.onfocusin=()=>hi(i);list.append(li)});
-  const xy=pts.map(p=>P([p[2],p[3]])).concat([P(HOME)]);
-  let x0=Math.min(...xy.map(p=>p[0])),x1=Math.max(...xy.map(p=>p[0])),y0=Math.min(...xy.map(p=>p[1])),y1=Math.max(...xy.map(p=>p[1]));
-  const pad=Math.max(x1-x0,y1-y0)*.14+2;x0-=pad;x1+=pad*2.2;y0-=pad;y1+=pad;
-  if(x1-x0<44){const c=(x0+x1)/2;x0=c-22;x1=c+22}if(y1-y0<35){const c=(y0+y1)/2;y0=c-17.5;y1=c+17.5}
-  let w=x1-x0,h=y1-y0;const ar=5/4;if(w/h<ar){const nw=h*ar;x0-=(nw-w)/2;w=nw}else{const nh=w/ar;y0-=(nh-h)/2;h=nh}
-  setVB([x0,y0,w,h]);
-}
-document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));show(b.dataset.set)});
-show('schlei');addEventListener('resize',scale);
 
 /* ---------- Preisrechner nach den Regeln der Seite Buchung ---------- */
 const fmt=n=>n.toLocaleString('de-DE')+' Euro';
@@ -578,6 +765,12 @@ function calc(){const sum=$('sum'),msg=$('msg'),send=$('send');sum.innerHTML='';
   const body='Anreise: '+D(di)+'\nAbreise: '+D(dout)+'\nNächte: '+n+'\nErwachsene: '+a+'\nKinder (8 bis 16 Jahre): '+k+'\nPreis laut Website: '+fmt(total)+'\n\nName:\nTelefon:\n';
   send.href='mailto:hello@hauszweineun.de?subject='+encodeURIComponent('Anfrage HAUS ZWEINEUN '+D(di)+' bis '+D(dout))+'&body='+encodeURIComponent(body);send.removeAttribute('aria-disabled')}
 ['in','out','ad','ki'].forEach(id=>$(id).addEventListener('input',()=>{if(id==='in'&&$('in').value){const d=new Date($('in').value+'T00:00');d.setDate(d.getDate()+1);$('out').min=iso(d)}calc()}));calc();
+
+/* ---------- Kapitelwörter ---------- */
+(function(){var hs=[].slice.call(document.querySelectorAll('.chap h2'));if(!hs.length)return;
+ if(!('IntersectionObserver' in window)){hs.forEach(function(x){x.classList.add('in')});return}
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){var h=e.target.querySelector('h2');if(e.isIntersecting&&e.intersectionRatio>=.3)h.classList.add('in');else if(!e.isIntersecting)h.classList.remove('in')})},{threshold:[0,.3]});
+ hs.forEach(function(x){io.observe(x.parentNode)})})();
 </script>
 </body>
 </html>
